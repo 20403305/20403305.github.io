@@ -1,5 +1,7 @@
-+++
-title = 'My First Post'
-date = 2024-12-13T16:14:14+08:00
-draft = true
-+++
+---
+title: "我的第一篇博客文章"
+date: 2024-12-13
+draft: false
+---
+
+这是一篇示例文章，欢迎来到我的博客！
