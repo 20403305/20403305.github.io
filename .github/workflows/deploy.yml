@@ -1,0 +1,29 @@
+name: Deploy Hugo site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master  # 当 master 分支有推送时触发
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest  # 运行环境
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: '0.128.0'  # 指定 Hugo 的版本，根据你的需求调整版本号
+
+    - name: Build the Hugo site
+      run: hugo --minify  # 构建站点并压缩输出
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}  # 使用 GitHub 提供的 token
+        publish_dir: ./public  # 指定要发布的目录
+        publish_branch: gh-pages  # 指定要推送到的分支 (默认是 gh-pages)
