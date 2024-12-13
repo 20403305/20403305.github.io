@@ -3,27 +3,51 @@ name: Deploy Hugo site to GitHub Pages
 on:
   push:
     branches:
-      - master  # 当 master 分支有推送时触发
+      - master  # 触发工作流的分支是 master
+  workflow_dispatch:  # 允许手动触发工作流
+
+permissions:
+  contents: read  # 读取仓库内容
+  pages: write    # 写入 GitHub Pages
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false  # 允许多个任务并行运行，但不取消当前进行中的任务
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest  # 运行环境
+  build:
+    runs-on: ubuntu-latest  # 使用 Ubuntu 最新版本的环境
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      # 检出仓库代码
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    - name: Set up Hugo
-      uses: peaceiris/actions-hugo@v2
-      with:
-        hugo-version: '0.128.0'  # 指定 Hugo 的版本，根据你的需求调整版本号
+      # 设置 Hugo 环境
+      - name: Set up Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.128.0'  # 你可以根据需要更改 Hugo 版本
 
-    - name: Build the Hugo site
-      run: hugo --minify  # 构建站点并压缩输出
+      # 构建 Hugo 网站
+      - name: Build the Hugo site
+        run: hugo --minify  # 生成静态文件并进行最小化处理
 
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}  # 使用 GitHub 提供的 token
-        publish_dir: ./public  # 指定要发布的目录
-        publish_branch: gh-pages  # 指定要推送到的分支 (默认是 gh-pages)
+      # 上传构建的静态文件到 GitHub Pages
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public  # Hugo 构建的文件会被输出到 `public` 目录
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build  # 依赖于 build 作业，确保先构建后部署
+    steps:
+      # 将构建的静态文件部署到 GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          branch: gh-pages  # 将构建的文件推送到 `gh-pages` 分支
+          folder: ./public  # Hugo 输出的静态文件目录
