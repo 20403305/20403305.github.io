@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>资料库</title>
+    <title>Search | 资料库</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="欢迎访问我的博客！">
     <meta name="generator" content="Hugo 0.128.0">
@@ -25,8 +25,6 @@
 
     
     
-    
-
 
     
       
@@ -35,27 +33,26 @@
 
     
     
-      <link href="/tags/hugo/index.xml" rel="alternate" type="application/rss+xml" title="资料库" />
-      <link href="/tags/hugo/index.xml" rel="feed" type="application/rss+xml" title="资料库" />
+      <link href="/search/index.xml" rel="alternate" type="application/rss+xml" title="资料库" />
+      <link href="/search/index.xml" rel="feed" type="application/rss+xml" title="资料库" />
       
     
 
     
-      <link rel="canonical" href="http://localhost:1313/tags/hugo/">
+      <link rel="canonical" href="http://localhost:1313/search/">
     
 
-    <meta property="og:url" content="http://localhost:1313/tags/hugo/">
+    <meta property="og:url" content="http://localhost:1313/search/">
   <meta property="og:site_name" content="资料库">
-  <meta property="og:title" content="Hugo">
+  <meta property="og:title" content="Search">
   <meta property="og:description" content="欢迎访问我的博客！">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="website">
 
-  <meta itemprop="name" content="Hugo">
+  <meta itemprop="name" content="Search">
   <meta itemprop="description" content="欢迎访问我的博客！">
-  <meta itemprop="dateModified" content="2024-12-13T12:00:00+08:00">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Hugo">
+  <meta name="twitter:title" content="Search">
   <meta name="twitter:description" content="欢迎访问我的博客！">
 
 	
@@ -108,7 +105,7 @@
 
       <div class="tc-l pv3 ph3 ph4-ns">
         <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
-          Hugo
+          Search
         </h1>
         
       </div>
@@ -129,66 +126,30 @@
   </header>
 
 
-    
-<button id="search-btn">搜索</button>
-
-
-
-
-
-
-<script src="js/fastsearch.js"></script>
-
     <main class="pb7" role="main">
       
-  <article class="cf pa3 pa4-m pa4-l">
-    <div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links mid-gray">
-      <p>Below you will find pages that utilize the taxonomy term “Hugo”</p>
-    </div>
-  </article>
-  <div class="mw8 center">
-    <section class="flex-ns flex-wrap justify-around mt5">
-      
-        <div class="relative w-100  mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/my-second-post/" class="link black dim">
-        我的第二篇博客
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      我的第一篇博客 欢迎来到我的博客网站！这是我使用 Hugo 搭建的个人博客。
-Hugo 是一个非常快速的静态网站生成器，它使用 Markdown 格式写作，支持丰富的功能和主题，非常适合用来创建个人博客。
-关于 Hugo Hugo 是一个快速且灵活的静态网站生成器。它非常适合用来构建个人博客、公司网站、项目展示等各种网站。
-    </div>
-    <a href="/posts/my-second-post/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-  </div>
-</div>
 
-        </div>
-      
-        <div class="relative w-100  mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/my-first-post/" class="link black dim">
-        我的第一篇博客文章
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      This is a short summary of the article.
-    </div>
-    <a href="/posts/my-first-post/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-  </div>
-</div>
+<main>
+    <div id="search-results"></div>
+    <div class="search-loading">Loading...</div>
 
-        </div>
-      
-    </section>
-  </div>
+    <script id="search-result-template" type="text/x-js-template">
+    <div id="summary-${key}">
+        <h3><a href="${link}">${title}</a></h3>
+        <p>${snippet}</p>
+        <p>
+            <small>
+                ${ isset tags }Tags: ${tags}<br>${ end }
+            </small>
+        </p>
+    </div>
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.6.2/fuse.min.js" integrity="sha512-Nqw1tH3mpavka9cQCc5zWWEZNfIPdOYyQFjlV1NvflEtQ0/XI6ZQ+H/D3YgJdqSUJlMLAPRj/oXlaHCFbFCjoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</main>
+
 
     </main>
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">

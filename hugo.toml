@@ -51,6 +51,13 @@ theme = "ananke"  # 这里根据你的主题来设置
     ordered = true         # 是否以有序列表（1、2、3...）显示
     float = false          # 是否在页面滚动时保持固定在页面的某个位置
 
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ['html']
+  rss = ['rss']
+  section = ['html', 'rss']
+  taxonomy = ['html', 'rss']
+  term = ['html', 'rss']
 
 
 # defaultContentLanguage = "zh-CN"

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
@@ -23,6 +24,9 @@
 
 
     
+    
+    
+
 
     
       
@@ -55,6 +59,8 @@
   <meta name="twitter:description" content="欢迎访问我的博客！">
 
 	
+  
+  <link rel="stylesheet" href="/css/custom.css">    
   </head><body class="ma0 avenir bg-near-white development">
 
     
@@ -122,6 +128,16 @@
 
   </header>
 
+
+    
+<button id="search-btn">搜索</button>
+
+
+
+
+
+
+<script src="js/fastsearch.js"></script>
 
     <main class="pb7" role="main">
       
@@ -213,7 +229,7 @@ Hugo 是一个非常快速的静态网站生成器，它使用 Markdown 格式�
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      这是一篇示例文章，欢迎来到我的博客！
+      This is a short summary of the article.
     </div>
     <a href="/posts/my-first-post/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
@@ -236,3 +252,11 @@ Hugo 是一个非常快速的静态网站生成器，它使用 Markdown 格式�
 
   </body>
 </html>
+
+<div id="fastSearch">
+  <input id="searchInput" tabindex="0">
+  <ul id="searchResults">
+  </ul>
+</div>
+<script src="/js/fuse.js"></script> 
+<script src="/js/fastsearch.js"></script>

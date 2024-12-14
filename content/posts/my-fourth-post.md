@@ -3,7 +3,7 @@ title = '主题和hugo兼容问题 || 手动升级 Hugo 版本'
 date = 2024-12-13T18:57:39+08:00
 summary = "升级 Hugo"
 draft = false
-
+categories = ["hugo"]
 +++
 
 

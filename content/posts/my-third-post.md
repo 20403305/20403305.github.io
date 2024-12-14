@@ -3,7 +3,7 @@ title = 'ubuntu liunx 如何用Hugo来搭建个人博客网站'
 date = 2024-12-13T18:52:28+08:00
 summary = "安装Hugo"
 draft = false
-
+categories = ["Tutorial"]
 +++
 
 

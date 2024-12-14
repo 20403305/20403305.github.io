@@ -2,6 +2,14 @@
 title: "我的第一篇博客文章"
 date: 2024-12-13
 draft: false
+categories:
+  - Tutorial
+tags:
+  - hugo
+  - tutorial
+  - blog
+summary: "This is a short summary of the article."
+section: "Technology"
 ---
 
 这是一篇示例文章，欢迎来到我的博客！

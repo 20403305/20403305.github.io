@@ -34,6 +34,7 @@ document.addEventListener('keydown', function(event) {
       }
   }
 
+
   // Allow ESC (27) to close search box
   if (event.key == 'Escape') {
     if (searchVisible) {
@@ -65,6 +66,28 @@ document.addEventListener('keydown', function(event) {
   }
 });
 
+
+// Adding button trigger for search
+document.getElementById("search-btn").addEventListener("click", function() {
+      // Load json search index if first time invoking search
+      // Means we don't load json unless searches are going to happen; keep user payload small unless needed
+      if(firstRun) {
+        loadSearch(); // loads our json data and builds fuse.js search index
+        firstRun = false; // let's never do this again
+      }
+      
+      // Toggle visibility of search box
+      if (!searchVisible) {
+        document.getElementById("fastSearch").style.visibility = "visible"; // show search box
+        document.getElementById("searchInput").focus(); // put focus in input box so you can just start typing
+        searchVisible = true; // search visible
+      }
+      else {
+        document.getElementById("fastSearch").style.visibility = "hidden"; // hide search box
+        document.activeElement.blur(); // remove focus from search box 
+        searchVisible = false; // search not visible
+      }
+});
 
 // ==========================================
 // execute search as each character is typed
@@ -108,7 +131,10 @@ function loadSearch() {
         keys: [
           'title',
           'permalink',
-          'summary'
+          'summary',
+          'contents',    // 搜索正文内容
+          'tags',       // 如果需要，可以搜索标签
+          'categories'  // 如果需要，可以搜索分类
           ]
       };
 
@@ -125,6 +151,7 @@ function loadSearch() {
 //
 function executeSearch(term) {
   let results = fuse.search(term); // the actual query being run using fuse.js
+  console.log(results);  // debug print the full result item
   let searchitems = ''; // our results bucket
 
   if (results.length === 0) { // no results based on what was typed into the input box
@@ -132,7 +159,9 @@ function executeSearch(term) {
     searchitems = '';
   } else { // build our html 
     for (let item in results.slice(0,5)) { // only show first 5 results
-      searchitems = searchitems + '<li><a href="' + results[item].permalink + '" tabindex="0">' + '<span class="title">' + results[item].title + '</span><br /> <span class="sc">'+ results[item].section +'</span> — ' + results[item].date + ' — <em>' + results[item].desc + '</em></a></li>';
+      console.log(results[item].item);
+      searchitems = searchitems + '<li><a href="' + results[item].item.permalink + '" tabindex="0">' + '<span class="title">' + results[item].item.title + '</span><br /> <span class="sc">'+ results[item].item.tags +'</span> — ' + results[item].item.date + ' — <em>' + results[item].item.desc + '</em></a></li>'; 
+
     }
     resultsAvailable = true;
   }

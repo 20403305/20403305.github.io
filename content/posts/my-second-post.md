@@ -2,6 +2,8 @@
 title: "我的第二篇博客"
 date: 2024-12-13T12:00:00+08:00
 draft: false
+categories:
+  - Tutorial
 tags:
   - hugo
   - tutorial

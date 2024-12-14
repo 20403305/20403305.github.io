@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
@@ -23,6 +24,9 @@
 
 
     
+    
+    
+
 
     
       
@@ -49,6 +53,8 @@
   <meta name="twitter:description" content="欢迎访问我的博客！">
 
 	
+  
+  <link rel="stylesheet" href="/css/custom.css">    
   </head><body class="ma0 avenir bg-near-white development">
 
     
@@ -98,6 +104,16 @@
   </header>
 
 
+    
+<button id="search-btn">搜索</button>
+
+
+
+
+
+
+<script src="js/fastsearch.js"></script>
+
     <main class="pb7" role="main">
       
     <article class="center cf pv5 measure-wide-l">
@@ -119,3 +135,11 @@
 
   </body>
 </html>
+
+<div id="fastSearch">
+  <input id="searchInput" tabindex="0">
+  <ul id="searchResults">
+  </ul>
+</div>
+<script src="/js/fuse.js"></script> 
+<script src="/js/fastsearch.js"></script>
