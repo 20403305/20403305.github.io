@@ -1,4 +1,73 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = "ananke"
+# 网站的基本设置
+baseURL = "https://example.com/"
+title = "资料库"
+languageCode = "zh-CN"  # 设置为中文
+theme = "ananke"  # 这里根据你的主题来设置
+
+# 配置导航栏等内容
+[params]
+  description = "欢迎访问我的博客！"
+  author = "小苏同志"
+  enableSearch = true  # 启用搜索功能
+  # 设置日期格式
+  dateFormat = "2006年01月02日"  # 例如: "2024年12月13日"
+  mainMenu = ["Home", "About", "Blog"]
+  enableRobotsTXT = true # 允许所有搜索引擎爬虫抓取站点
+  googleAnalytics = "G-3ES96XM22P"  # 替换成你的 Google Analytics 跟踪 ID
+
+[build]
+  writeStats = false  # 禁用构建统计信息
+
+[server]
+  environment = "development"  # 在开发环境中禁用
+
+[[menu.main]]
+  identifier = "home"
+  name = "首页"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  identifier = "about"
+  name = "关于我"
+  url = "/about/"
+  weight = 2
+
+[[menu.main]]
+  identifier = "contact"
+  name = "联系我"
+  url = "/contact/"
+  weight = 3
+
+# 配置搜索（如果主题支持）
+[params.search]
+  enable = true  # 启用搜索功能
+
+[markup]
+  [markup.tableOfContents]
+    enable = true          # 启用目录
+    minLevel = 2           # 目录的最小标题级别
+    maxLevel = 3           # 目录的最大标题级别
+    ordered = true         # 是否以有序列表（1、2、3...）显示
+    float = false          # 是否在页面滚动时保持固定在页面的某个位置
+
+
+
+# defaultContentLanguage = "zh-CN"
+# languages = ["en", "zh-CN"]
+# 
+# [languages.en]
+#   languageName = "English"
+#   weight = 1
+#   # contentDir = "content/en"
+#   contentDir = "content/posts"
+#   title = "My English Blog"
+#   languageCode = "en"
+# 
+# [languages.zh-CN]
+#   languageName = "中文"
+#   weight = 2
+#   # contentDir = "content/zh"
+#   contentDir = "content/posts"
+#   title = "我的中文博客"
+#   languageCode = "zh-CN"

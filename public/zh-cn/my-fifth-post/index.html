@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>如何在github action中配置hugo | 我的中文博客</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="在 GitHub Actions 中配置 Hugo 的步骤如下：
+设置 GitHub Actions 工作流文件：你需要创建一个 GitHub Actions 工作流文件，通常位于 .github/workflows/ 目录下，名为 deploy.yml 或类似的名称。 安装和配置 Hugo：你可以使用 peaceiris/actions-hugo GitHub Action 来自动安装和配置 Hugo。 下面是一个完整的工作流配置示例，演示了如何在 GitHub Actions 中设置和配置 Hugo，并自动将 Hugo 网站部署到 GitHub Pages。
+步骤 1：创建工作流文件 在你的 Hugo 项目中，创建 .github/workflows 目录（如果还没有的话）。 在 .github/workflows 目录下创建一个名为 deploy.yml 的工作流文件。 mkdir -p .github/workflows touch .github/workflows/deploy.yml 步骤 2：编辑工作流文件 在 deploy.yml 中，配置如下内容：
+name: Deploy Hugo site to GitHub Pages on: push: branches: - main # 当推送到 main（或你使用的默认分支）时触发构建 workflow_dispatch: # 允许手动触发工作流 permissions: contents: read # 读取仓库内容 pages: write # 写入 GitHub Pages id-token: write concurrency: group: &#34;pages&#34; cancel-in-progress: false # 允许同时运行多个工作流实例，但不取消进行中的任务 jobs: build: runs-on: ubuntu-latest # 使用 Ubuntu 最新版本的环境 steps: # 检出仓库代码 - name: Checkout code uses: actions/checkout@v4 # 设置 Hugo - name: Set up Hugo uses: peaceiris/actions-hugo@v2 with: hugo-version: &#39;0.">
+    <meta name="generator" content="Hugo 0.128.0">
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+      <meta name="author" content = "小苏同志">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/zh-cn/my-fifth-post/">
+    
+
+    <meta property="og:url" content="http://localhost:1313/zh-cn/my-fifth-post/">
+  <meta property="og:site_name" content="我的中文博客">
+  <meta property="og:title" content="如何在github action中配置hugo">
+  <meta property="og:description" content="在 GitHub Actions 中配置 Hugo 的步骤如下：
+设置 GitHub Actions 工作流文件：你需要创建一个 GitHub Actions 工作流文件，通常位于 .github/workflows/ 目录下，名为 deploy.yml 或类似的名称。 安装和配置 Hugo：你可以使用 peaceiris/actions-hugo GitHub Action 来自动安装和配置 Hugo。 下面是一个完整的工作流配置示例，演示了如何在 GitHub Actions 中设置和配置 Hugo，并自动将 Hugo 网站部署到 GitHub Pages。
+步骤 1：创建工作流文件 在你的 Hugo 项目中，创建 .github/workflows 目录（如果还没有的话）。 在 .github/workflows 目录下创建一个名为 deploy.yml 的工作流文件。 mkdir -p .github/workflows touch .github/workflows/deploy.yml 步骤 2：编辑工作流文件 在 deploy.yml 中，配置如下内容：
+name: Deploy Hugo site to GitHub Pages on: push: branches: - main # 当推送到 main（或你使用的默认分支）时触发构建 workflow_dispatch: # 允许手动触发工作流 permissions: contents: read # 读取仓库内容 pages: write # 写入 GitHub Pages id-token: write concurrency: group: &#34;pages&#34; cancel-in-progress: false # 允许同时运行多个工作流实例，但不取消进行中的任务 jobs: build: runs-on: ubuntu-latest # 使用 Ubuntu 最新版本的环境 steps: # 检出仓库代码 - name: Checkout code uses: actions/checkout@v4 # 设置 Hugo - name: Set up Hugo uses: peaceiris/actions-hugo@v2 with: hugo-version: &#39;0.">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2024-12-13T19:04:36+08:00">
+    <meta property="article:modified_time" content="2024-12-13T19:04:36+08:00">
+
+  <meta itemprop="name" content="如何在github action中配置hugo">
+  <meta itemprop="description" content="在 GitHub Actions 中配置 Hugo 的步骤如下：
+设置 GitHub Actions 工作流文件：你需要创建一个 GitHub Actions 工作流文件，通常位于 .github/workflows/ 目录下，名为 deploy.yml 或类似的名称。 安装和配置 Hugo：你可以使用 peaceiris/actions-hugo GitHub Action 来自动安装和配置 Hugo。 下面是一个完整的工作流配置示例，演示了如何在 GitHub Actions 中设置和配置 Hugo，并自动将 Hugo 网站部署到 GitHub Pages。
+步骤 1：创建工作流文件 在你的 Hugo 项目中，创建 .github/workflows 目录（如果还没有的话）。 在 .github/workflows 目录下创建一个名为 deploy.yml 的工作流文件。 mkdir -p .github/workflows touch .github/workflows/deploy.yml 步骤 2：编辑工作流文件 在 deploy.yml 中，配置如下内容：
+name: Deploy Hugo site to GitHub Pages on: push: branches: - main # 当推送到 main（或你使用的默认分支）时触发构建 workflow_dispatch: # 允许手动触发工作流 permissions: contents: read # 读取仓库内容 pages: write # 写入 GitHub Pages id-token: write concurrency: group: &#34;pages&#34; cancel-in-progress: false # 允许同时运行多个工作流实例，但不取消进行中的任务 jobs: build: runs-on: ubuntu-latest # 使用 Ubuntu 最新版本的环境 steps: # 检出仓库代码 - name: Checkout code uses: actions/checkout@v4 # 设置 Hugo - name: Set up Hugo uses: peaceiris/actions-hugo@v2 with: hugo-version: &#39;0.">
+  <meta itemprop="datePublished" content="2024-12-13T19:04:36+08:00">
+  <meta itemprop="dateModified" content="2024-12-13T19:04:36+08:00">
+  <meta itemprop="wordCount" content="661">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="如何在github action中配置hugo">
+  <meta name="twitter:description" content="在 GitHub Actions 中配置 Hugo 的步骤如下：
+设置 GitHub Actions 工作流文件：你需要创建一个 GitHub Actions 工作流文件，通常位于 .github/workflows/ 目录下，名为 deploy.yml 或类似的名称。 安装和配置 Hugo：你可以使用 peaceiris/actions-hugo GitHub Action 来自动安装和配置 Hugo。 下面是一个完整的工作流配置示例，演示了如何在 GitHub Actions 中设置和配置 Hugo，并自动将 Hugo 网站部署到 GitHub Pages。
+步骤 1：创建工作流文件 在你的 Hugo 项目中，创建 .github/workflows 目录（如果还没有的话）。 在 .github/workflows 目录下创建一个名为 deploy.yml 的工作流文件。 mkdir -p .github/workflows touch .github/workflows/deploy.yml 步骤 2：编辑工作流文件 在 deploy.yml 中，配置如下内容：
+name: Deploy Hugo site to GitHub Pages on: push: branches: - main # 当推送到 main（或你使用的默认分支）时触发构建 workflow_dispatch: # 允许手动触发工作流 permissions: contents: read # 读取仓库内容 pages: write # 写入 GitHub Pages id-token: write concurrency: group: &#34;pages&#34; cancel-in-progress: false # 允许同时运行多个工作流实例，但不取消进行中的任务 jobs: build: runs-on: ubuntu-latest # 使用 Ubuntu 最新版本的环境 steps: # 检出仓库代码 - name: Checkout code uses: actions/checkout@v4 # 设置 Hugo - name: Set up Hugo uses: peaceiris/actions-hugo@v2 with: hugo-version: &#39;0.">
+
+	
+  </head><body class="ma0 avenir bg-near-white development">
+
+    
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/zh-cn/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        我的中文博客
+      
+    </a>
+    <div class="flex-l items-center">
+      
+<h4></h4>
+<ul class="pl0 mr3">
+    
+    <li class="list f5 f4-ns fw4 dib pr3">
+        <a class="hover-white no-underline white-90" href="/my-fifth-post/">en</a>
+    </li>
+    
+</ul>
+
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="首页 page">
+              首页
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="关于我 page">
+              关于我
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/contact/" title="联系我 page">
+              联系我
+            </a>
+          </li>
+          
+        </ul>
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+  <div class="flex-l mt2 mw8 center">
+    <article class="center cf pv5 ph3 ph4-ns mw7">
+      <header>
+        <h1 class="f1">
+          如何在github action中配置hugo
+        </h1>
+      </header>
+      <div class="nested-copy-line-height lh-copy f4 nested-links mid-gray">
+        <p>在 GitHub Actions 中配置 <strong>Hugo</strong> 的步骤如下：</p>
+<ol>
+<li><strong>设置 GitHub Actions 工作流文件</strong>：你需要创建一个 GitHub Actions 工作流文件，通常位于 <code>.github/workflows/</code> 目录下，名为 <code>deploy.yml</code> 或类似的名称。</li>
+<li><strong>安装和配置 Hugo</strong>：你可以使用 <code>peaceiris/actions-hugo</code> GitHub Action 来自动安装和配置 Hugo。</li>
+</ol>
+<p>下面是一个完整的工作流配置示例，演示了如何在 GitHub Actions 中设置和配置 Hugo，并自动将 Hugo 网站部署到 GitHub Pages。</p>
+<h3 id="步骤-1创建工作流文件">步骤 1：创建工作流文件</h3>
+<ol>
+<li>在你的 Hugo 项目中，创建 <code>.github/workflows</code> 目录（如果还没有的话）。</li>
+<li>在 <code>.github/workflows</code> 目录下创建一个名为 <code>deploy.yml</code> 的工作流文件。</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir -p .github/workflows
+</span></span><span style="display:flex;"><span>touch .github/workflows/deploy.yml
+</span></span></code></pre></div><h3 id="步骤-2编辑工作流文件">步骤 2：编辑工作流文件</h3>
+<p>在 <code>deploy.yml</code> 中，配置如下内容：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Deploy Hugo site to GitHub Pages</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">on</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">push</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">branches</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">main </span> <span style="color:#75715e"># 当推送到 main（或你使用的默认分支）时触发构建</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">workflow_dispatch</span>:  <span style="color:#75715e"># 允许手动触发工作流</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">permissions</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">contents</span>: <span style="color:#ae81ff">read </span> <span style="color:#75715e"># 读取仓库内容</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">pages</span>: <span style="color:#ae81ff">write   </span> <span style="color:#75715e"># 写入 GitHub Pages</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">id-token</span>: <span style="color:#ae81ff">write</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">concurrency</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">group</span>: <span style="color:#e6db74">&#34;pages&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">cancel-in-progress</span>: <span style="color:#66d9ef">false</span>  <span style="color:#75715e"># 允许同时运行多个工作流实例，但不取消进行中的任务</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobs</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">build</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest </span> <span style="color:#75715e"># 使用 Ubuntu 最新版本的环境</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># 检出仓库代码</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Checkout code</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v4</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># 设置 Hugo</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Set up Hugo</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">peaceiris/actions-hugo@v2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">hugo-version</span>: <span style="color:#e6db74">&#39;0.128.0&#39;</span>  <span style="color:#75715e"># 指定 Hugo 的版本，可以根据需要调整</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># 构建 Hugo 网站</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Build the Hugo site</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: <span style="color:#ae81ff">hugo --minify </span> <span style="color:#75715e"># 生成静态文件并进行压缩</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># 上传构建的静态文件到 GitHub Pages</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Upload artifact</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/upload-pages-artifact@v3</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">path</span>: <span style="color:#ae81ff">./public </span> <span style="color:#75715e"># Hugo 构建结果会在 public 目录下</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">deploy</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">needs</span>: <span style="color:#ae81ff">build </span> <span style="color:#75715e"># 依赖于 build 作业，确保先构建后部署</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># 部署到 GitHub Pages</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Deploy to GitHub Pages</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">id</span>: <span style="color:#ae81ff">deployment</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/deploy-pages@v4</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">branch</span>: <span style="color:#ae81ff">gh-pages </span> <span style="color:#75715e"># 将构建的文件推送到 `gh-pages` 分支</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">folder</span>: <span style="color:#ae81ff">./public </span> <span style="color:#75715e"># Hugo 输出的静态文件目录</span>
+</span></span></code></pre></div><h3 id="解释工作流文件">解释工作流文件</h3>
+<ol>
+<li>
+<p><strong>触发条件 (<code>on</code>)</strong>：</p>
+<ul>
+<li><code>push</code>: 当推送到 <code>main</code>（或你选择的默认分支）时，触发构建和部署流程。</li>
+<li><code>workflow_dispatch</code>: 允许手动触发此工作流。</li>
+</ul>
+</li>
+<li>
+<p><strong>权限配置 (<code>permissions</code>)</strong>：</p>
+<ul>
+<li><code>contents: read</code>: 允许读取仓库内容。</li>
+<li><code>pages: write</code>: 允许将构建内容推送到 GitHub Pages。</li>
+<li><code>id-token: write</code>: 用于获取 GitHub Pages 的访问权限。</li>
+</ul>
+</li>
+<li>
+<p><strong>并发配置 (<code>concurrency</code>)</strong>：</p>
+<ul>
+<li>这个配置确保不会有多个构建并行执行，而是等当前部署完成后再执行下一个部署。</li>
+</ul>
+</li>
+<li>
+<p><strong>作业 <code>build</code></strong>：</p>
+<ul>
+<li><code>actions/checkout@v4</code>: 检出 GitHub 仓库代码。</li>
+<li><code>peaceiris/actions-hugo@v2</code>: 设置 Hugo，安装指定版本的 Hugo（如 <code>0.128.0</code>）。</li>
+<li><code>hugo --minify</code>: 执行 Hugo 命令生成静态网站，并将文件输出到 <code>public/</code> 目录。</li>
+<li><code>actions/upload-pages-artifact@v3</code>: 上传 <code>public/</code> 目录中的构建文件，以便后续部署。</li>
+</ul>
+</li>
+<li>
+<p><strong>作业 <code>deploy</code></strong>：</p>
+<ul>
+<li>使用 <code>actions/deploy-pages@v4</code> 将 <code>public/</code> 目录中的文件部署到 <code>gh-pages</code> 分支，供 GitHub Pages 提供服务。</li>
+</ul>
+</li>
+</ol>
+<h3 id="步骤-3配置-github-pages">步骤 3：配置 GitHub Pages</h3>
+<p>确保你已经配置了 GitHub Pages：</p>
+<ol>
+<li>进入你的 GitHub 仓库。</li>
+<li>在仓库的 <strong>Settings</strong> &gt; <strong>Pages</strong> 部分，选择 <code>gh-pages</code> 分支作为源。</li>
+</ol>
+<h3 id="步骤-4推送工作流文件并验证">步骤 4：推送工作流文件并验证</h3>
+<ol>
+<li>提交并推送 <code>.github/workflows/deploy.yml</code> 文件到你的仓库。</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add .github/workflows/deploy.yml
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Add GitHub Actions workflow for Hugo site&#34;</span>
+</span></span><span style="display:flex;"><span>git push origin main
+</span></span></code></pre></div><ol start="2">
+<li>每当你向 <code>main</code> 分支推送更新时，GitHub Actions 会自动构建 Hugo 网站并将其部署到 <code>gh-pages</code> 分支。</li>
+<li>你可以通过访问 <code>https://&lt;your-username&gt;.github.io/&lt;your-repository&gt;</code> 来查看部署的 Hugo 网站。</li>
+</ol>
+<h3 id="步骤-5查看构建日志和部署状态">步骤 5：查看构建日志和部署状态</h3>
+<ol>
+<li>在 GitHub 仓库中，点击 <strong>Actions</strong> 标签页查看工作流的执行情况。</li>
+<li>如果一切顺利，网站将自动部署到 GitHub Pages。</li>
+</ol>
+<h3 id="总结">总结</h3>
+<p>通过 GitHub Actions 自动化 Hugo 网站的部署步骤：</p>
+<ol>
+<li>创建 <code>.github/workflows/deploy.yml</code> 工作流文件。</li>
+<li>配置 Hugo 安装、构建并上传静态文件。</li>
+<li>配置部署到 <code>gh-pages</code> 分支。</li>
+<li>提交并推送到 GitHub 仓库，GitHub Actions 会自动构建并部署 Hugo 网站。</li>
+</ol>
+<p>通过这种方式，你就能轻松地自动化 Hugo 网站的构建和发布过程，无需手动干预。</p>
+<h3 id="其他问题">其他问题</h3>
+<p>在哪个分支下创建deploy.yml。我的主分支是master，还有一个gh-pages</p>
+<p>在 GitHub Actions 中创建工作流文件 (<code>deploy.yml</code>) 的位置应当是 <strong>主分支</strong>，也就是你的 <code>master</code> 分支（或你项目中的默认分支）。通常，GitHub Actions 文件放在主分支下，因为它是管理仓库和启动自动化任务的核心分支。</p>
+<h3 id="具体步骤">具体步骤：</h3>
+<ol>
+<li>
+<p><strong>工作流文件的位置</strong>：</p>
+<ul>
+<li>工作流文件应该放在仓库的 <code>master</code> 分支下，路径是 <code>.github/workflows/deploy.yml</code>。这个文件将会在 <code>master</code> 分支发生更改时被触发。</li>
+</ul>
+</li>
+<li>
+<p><strong>工作流触发的分支</strong>：</p>
+<ul>
+<li>在 <code>deploy.yml</code> 文件中，你会配置触发器 <code>on.push.branches</code> 来指定工作流在哪个分支上触发。例如，下面的配置会在 <code>master</code> 分支发生 push 时触发工作流：</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">on</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">push</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">branches</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">master </span> <span style="color:#75715e"># 触发条件：当推送到 master 分支时触发</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>部署到 <code>gh-pages</code> 分支</strong>：</p>
+<ul>
+<li>即使工作流文件在 <code>master</code> 分支下，部署时可以将静态站点部署到 <code>gh-pages</code> 分支。你不需要把 <code>deploy.yml</code> 放在 <code>gh-pages</code> 分支，因为 GitHub Actions 会根据你在 <code>deploy.yml</code> 中的配置将文件推送到 <code>gh-pages</code> 分支。</li>
+</ul>
+</li>
+</ol>
+<h3 id="最终文件结构">最终文件结构</h3>
+<p>假设你的仓库有以下文件结构：</p>
+<pre tabindex="0"><code>.
+├── .github
+│   └── workflows
+│       └── deploy.yml   # 这个文件应该放在 master 分支下
+├── content
+├── themes
+├── static
+├── config.toml
+├── public/   # 这是 Hugo 构建的输出文件目录，GitHub Pages 会从这里部署网站
+</code></pre><h3 id="完整的-deployyml-示例">完整的 <code>deploy.yml</code> 示例</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Deploy Hugo site to GitHub Pages</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">on</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">push</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">branches</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">master </span> <span style="color:#75715e"># 触发工作流的分支是 master</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">workflow_dispatch</span>:  <span style="color:#75715e"># 允许手动触发工作流</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">permissions</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">contents</span>: <span style="color:#ae81ff">read </span> <span style="color:#75715e"># 读取仓库内容</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">pages</span>: <span style="color:#ae81ff">write   </span> <span style="color:#75715e"># 写入 GitHub Pages</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">id-token</span>: <span style="color:#ae81ff">write</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">concurrency</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">group</span>: <span style="color:#e6db74">&#34;pages&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">cancel-in-progress</span>: <span style="color:#66d9ef">false</span>  <span style="color:#75715e"># 允许多个任务并行运行，但不取消当前进行中的任务</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobs</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">build</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest </span> <span style="color:#75715e"># 使用 Ubuntu 最新版本的环境</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># 检出仓库代码</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Checkout code</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v4</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># 设置 Hugo 环境</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Set up Hugo</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">peaceiris/actions-hugo@v2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">hugo-version</span>: <span style="color:#e6db74">&#39;0.128.0&#39;</span>  <span style="color:#75715e"># 你可以根据需要更改 Hugo 版本</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># 构建 Hugo 网站</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Build the Hugo site</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: <span style="color:#ae81ff">hugo --minify </span> <span style="color:#75715e"># 生成静态文件并进行最小化处理</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># 上传构建的静态文件到 GitHub Pages</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Upload artifact</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/upload-pages-artifact@v3</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">path</span>: <span style="color:#ae81ff">./public </span> <span style="color:#75715e"># Hugo 构建的文件会被输出到 `public` 目录</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">deploy</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">needs</span>: <span style="color:#ae81ff">build </span> <span style="color:#75715e"># 依赖于 build 作业，确保先构建后部署</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># 将构建的静态文件部署到 GitHub Pages</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Deploy to GitHub Pages</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">id</span>: <span style="color:#ae81ff">deployment</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/deploy-pages@v4</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">branch</span>: <span style="color:#ae81ff">gh-pages </span> <span style="color:#75715e"># 将构建的文件推送到 `gh-pages` 分支</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">folder</span>: <span style="color:#ae81ff">./public </span> <span style="color:#75715e"># Hugo 输出的静态文件目录</span>
+</span></span></code></pre></div><h3 id="部署流程">部署流程</h3>
+<ul>
+<li>
+<p><strong>提交 <code>deploy.yml</code> 到 <code>master</code> 分支</strong>：
+将 <code>deploy.yml</code> 文件提交并推送到你的 <code>master</code> 分支。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add .github/workflows/deploy.yml
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Add GitHub Actions workflow for Hugo&#34;</span>
+</span></span><span style="display:flex;"><span>git push origin master
+</span></span></code></pre></div></li>
+<li>
+<p><strong>GitHub Actions 执行</strong>：</p>
+<ul>
+<li>当你向 <code>master</code> 分支推送更改时，GitHub Actions 将会自动触发构建和部署流程。</li>
+<li>构建完成后，静态文件将被推送到 <code>gh-pages</code> 分支，并通过 GitHub Pages 提供服务。</li>
+</ul>
+</li>
+</ul>
+<h3 id="访问-github-pages">访问 GitHub Pages</h3>
+<ul>
+<li>部署完成后，访问你的 GitHub Pages 网站：
+<pre tabindex="0"><code>https://&lt;你的 GitHub 用户名&gt;.github.io/&lt;仓库名&gt;/
+</code></pre>比如，如果用户名是 <code>johnDoe</code>，仓库名是 <code>myHugoBlog</code>，你可以访问：
+<pre tabindex="0"><code>https://johnDoe.github.io/myHugoBlog/
+</code></pre></li>
+</ul>
+<h3 id="总结-1">总结</h3>
+<ul>
+<li>将 <code>deploy.yml</code> 文件放在 <strong><code>master</code> 分支</strong> 下的 <code>.github/workflows/</code> 目录中。</li>
+<li>配置 GitHub Actions 触发条件为 <code>push</code> 到 <code>master</code> 分支。</li>
+<li>使用 Hugo 进行网站构建，将构建结果推送到 <code>gh-pages</code> 分支作为 GitHub Pages 的源。</li>
+</ul>
+
+      </div>
+    </article>
+  </div>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://localhost:1313/zh-cn/" >
+    &copy;  我的中文博客 2024 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

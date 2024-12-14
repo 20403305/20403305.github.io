@@ -1,0 +1,20 @@
+.sidebar {
+    width: 250px;  /* 侧边栏宽度 */
+    float: right;  /* 让侧边栏浮动到右侧 */
+    padding: 20px;
+    border: 1px solid #ccc; /* 为侧边栏添加边框 */
+  }
+  
+  .sidebar h3 {
+    font-size: 1.2em;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .sidebar ul li {
+    margin: 5px 0;
+  }
+  

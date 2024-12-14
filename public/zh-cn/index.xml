@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>我的中文博客</title>
+    <link>http://localhost:1313/zh-cn/</link>
+    <description>Recent content on 我的中文博客</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 13 Dec 2024 19:04:36 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/zh-cn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何在github action中配置hugo</title>
+      <link>http://localhost:1313/zh-cn/my-fifth-post/</link>
+      <pubDate>Fri, 13 Dec 2024 19:04:36 +0800</pubDate>
+      <guid>http://localhost:1313/zh-cn/my-fifth-post/</guid>
+      <description>在 GitHub Actions 中配置 Hugo 的步骤如下：&#xA;设置 GitHub Actions 工作流文件：你需要创建一个 GitHub Actions 工作流文件，通常位于 .github/workflows/ 目录下，名为 deploy.yml 或类似的名称。 安装和配置 Hugo：你可以使用 peaceiris/actions-hugo GitHub Action 来自动安装和配置 Hugo。 下面是一个完整的工作流配置示例，演示了如何在 GitHub Actions 中设置和配置 Hugo，并自动将 Hugo 网站部署到 GitHub Pages。&#xA;步骤 1：创建工作流文件 在你的 Hugo 项目中，创建 .github/workflows 目录（如果还没有的话）。 在 .github/workflows 目录下创建一个名为 deploy.yml 的工作流文件。 mkdir -p .github/workflows touch .github/workflows/deploy.yml 步骤 2：编辑工作流文件 在 deploy.yml 中，配置如下内容：&#xA;name: Deploy Hugo site to GitHub Pages on: push: branches: - main # 当推送到 main（或你使用的默认分支）时触发构建 workflow_dispatch: # 允许手动触发工作流 permissions: contents: read # 读取仓库内容 pages: write # 写入 GitHub Pages id-token: write concurrency: group: &amp;#34;pages&amp;#34; cancel-in-progress: false # 允许同时运行多个工作流实例，但不取消进行中的任务 jobs: build: runs-on: ubuntu-latest # 使用 Ubuntu 最新版本的环境 steps: # 检出仓库代码 - name: Checkout code uses: actions/checkout@v4 # 设置 Hugo - name: Set up Hugo uses: peaceiris/actions-hugo@v2 with: hugo-version: &amp;#39;0.</description>
+    </item>
+    <item>
+      <title>主题和hugo兼容问题 || 手动升级 Hugo 版本</title>
+      <link>http://localhost:1313/zh-cn/my-fourth-post/</link>
+      <pubDate>Fri, 13 Dec 2024 18:57:39 +0800</pubDate>
+      <guid>http://localhost:1313/zh-cn/my-fourth-post/</guid>
+      <description>从错误日志&#xA;Module &amp;#34;ananke&amp;#34; is not compatible with this Hugo version: Min 0.128.0; run &amp;#34;hugo mod graph&amp;#34; for more information. 问题原因 Ananke 主题要求使用 Hugo 版本至少为 0.128.0，而你当前使用的 Hugo 版本是 v0.123.7，因此会发生兼容性问题。&#xA;此外，错误的根本原因也包括以下几点：&#xA;error calling partial: &amp;#34;/root/myblog/themes/ananke/layouts/partials/site-style.html:1:8&amp;#34;: execute of template failed: template: partials/site-style.html:1:8: executing &amp;#34;partials/site-style.html&amp;#34; at &amp;lt;partialCached &amp;#34;func/style/GetMainCSS&amp;#34; &amp;#34;style/GetMainCSS&amp;#34;&amp;gt;: error calling partialCached: &amp;#34;/root/myblog/themes/ananke/layouts/partials/func/style/GetMainCSS.html:71:23&amp;#34;: execute of template failed: template: partials/func/style/GetMainCSS.html:71:23: executing &amp;#34;partials/func/style/GetMainCSS.html&amp;#34; at &amp;lt;css&amp;gt;: can&amp;#39;t evaluate field Sass in type interface {} 这个错误表明，主题的模板代码在处理样式时出错，尤其是在尝试加载或应用 Sass 样式时。</description>
+    </item>
+    <item>
+      <title>ubuntu liunx 如何用Hugo来搭建个人博客网站</title>
+      <link>http://localhost:1313/zh-cn/my-third-post/</link>
+      <pubDate>Fri, 13 Dec 2024 18:52:28 +0800</pubDate>
+      <guid>http://localhost:1313/zh-cn/my-third-post/</guid>
+      <description>在Ubuntu Linux上使用Hugo搭建个人博客网站的步骤如下：&#xA;1. 安装Hugo 通过Snap安装（推荐） Snap是Ubuntu默认的软件包管理工具之一，可以方便地安装Hugo。&#xA;打开终端，执行以下命令：&#xA;sudo snap install hugo 通过APT安装 如果你更喜欢使用APT包管理工具，可以通过以下命令安装Hugo：&#xA;sudo apt update sudo apt install hugo 2. 创建一个新的Hugo网站 安装完成后，使用以下命令来创建一个新的Hugo项目：&#xA;hugo new site my-blog my-blog是你博客项目的目录名称，你可以根据自己的需要修改。执行完该命令后，会创建一个名为my-blog的文件夹，其中包含了Hugo网站的基本结构。&#xA;3. 选择一个主题 Hugo有许多免费的主题，你可以从Hugo主题官网上查找。假设我们选择一个常见的主题ananke，你可以按照以下步骤进行操作：&#xA;进入你的博客项目文件夹：&#xA;cd my-blog 下载并将主题添加到网站的themes目录：&#xA;git init git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke 配置config.toml(或hugo.toml-0.128版本)以使用该主题：&#xA;编辑config.toml(或hugo.toml)文件，指定主题：&#xA;nano config.toml 在文件中添加或修改以下行：&#xA;theme = &amp;#34;ananke&amp;#34; 保存并退出编辑器（在nano中按CTRL+X，然后按Y确认保存，最后按Enter退出）。&#xA;4. 创建和编辑内容 在Hugo中，内容通常存放在content文件夹下。你可以创建博客文章、页面等。比如，要创建一篇新的博客文章，使用以下命令：&#xA;hugo new posts/my-first-post.md 这将在content/posts/目录下创建一个名为my-first-post.md的Markdown文件。你可以用文本编辑器打开并编辑它：&#xA;nano content/posts/my-first-post.md 在文件中填写你的博客文章内容，例如：&#xA;--- title: &amp;#34;我的第一篇博客文章&amp;#34; date: 2024-12-13 draft: true --- 这是我的第一篇博客文章！ 注意：draft: true表示这篇文章是草稿，未发布。如果想让它发布，修改为draft: false。</description>
+    </item>
+    <item>
+      <title>我的第二篇博客</title>
+      <link>http://localhost:1313/zh-cn/my-second-post/</link>
+      <pubDate>Fri, 13 Dec 2024 12:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/zh-cn/my-second-post/</guid>
+      <description>我的第一篇博客 欢迎来到我的博客网站！这是我使用 Hugo 搭建的个人博客。&#xA;Hugo 是一个非常快速的静态网站生成器，它使用 Markdown 格式写作，支持丰富的功能和主题，非常适合用来创建个人博客。&#xA;关于 Hugo Hugo 是一个快速且灵活的静态网站生成器。它非常适合用来构建个人博客、公司网站、项目展示等各种网站。</description>
+    </item>
+    <item>
+      <title>我的第一篇博客文章</title>
+      <link>http://localhost:1313/zh-cn/my-first-post/</link>
+      <pubDate>Fri, 13 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh-cn/my-first-post/</guid>
+      <description>这是一篇示例文章，欢迎来到我的博客！</description>
+    </item>
+  </channel>
+</rss>
