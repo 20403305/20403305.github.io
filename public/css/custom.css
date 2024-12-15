@@ -4,7 +4,7 @@
 #fastSearch { 
     visibility: hidden; /* 初始时隐藏 */
     position: absolute;
-    right: 700px;
+    right: 0px;
     top: 0px;
     display: inline-block;
     width: 500px;
