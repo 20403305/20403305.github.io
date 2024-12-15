@@ -1,10 +1,13 @@
+
+
+
 #fastSearch { 
-    visibility: hidden;
+    visibility: hidden; /* 初始时隐藏 */
     position: absolute;
-    right: 0px;
+    right: 700px;
     top: 0px;
     display: inline-block;
-    width: 300px;
+    width: 500px;
   }      
   
   #fastSearch input { 
@@ -14,23 +17,31 @@
     font-size: 1.6em;
     color: #aaa;
     font-weight: bold;
-    background-color: #000;
+    background-color: #fefafa;
     border-radius: 3px 3px 0px 0px;
     border: none;
     outline: none;
     text-align: left;
     display: inline-block;
   }
-  
+
+
+
+
   #searchResults li { 
+    overflow-y: auto;
     list-style: none; 
     margin-left: 0em;
-    background-color: #333; 
-    border-bottom: 1px dotted #000;
+    background-color: #f4f4f5; 
+    border-bottom: 1px dotted #f70e0e;
   }
     #searchResults li .title { font-size: 1.1em; margin-bottom: 10px; display: inline-block;}
   
-  #searchResults { visibility: inherit; display: inline-block; width: 320px; }
+  #searchResults { visibility: inherit; display: inline-block; width: 520px; }
   #searchResults a { text-decoration: none !important; padding: 10px; display: inline-block; }
-    #searchResults a:hover, a:focus { outline: 0; background-color: #666; color: #fff; }
+    #searchResults a:hover, a:focus { outline: 0; background-color: #ffffff; color: #010101; }
     
+
+
+
+  

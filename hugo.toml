@@ -1,5 +1,5 @@
 # 网站的基本设置
-baseURL = "https://example.com/"
+baseURL = "https://20403305.github.io/"
 title = "资料库"
 languageCode = "zh-CN"  # 设置为中文
 theme = "ananke"  # 这里根据你的主题来设置
@@ -14,12 +14,17 @@ theme = "ananke"  # 这里根据你的主题来设置
   mainMenu = ["Home", "About", "Blog"]
   enableRobotsTXT = true # 允许所有搜索引擎爬虫抓取站点
   googleAnalytics = "G-3ES96XM22P"  # 替换成你的 Google Analytics 跟踪 ID
+  baseURL = "https://20403305.github.io/"  # 默认值
+
+
+[production]
+  baseURL = "https://20403305.github.io"  # 生产环境
 
 [build]
   writeStats = false  # 禁用构建统计信息
 
-[server]
-  environment = "development"  # 在开发环境中禁用
+# [server]
+#   environment = "development"  # 在开发环境中禁用
 
 [[menu.main]]
   identifier = "home"

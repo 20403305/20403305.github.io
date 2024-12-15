@@ -5,4 +5,4 @@ draft: false
 ---
 
 你可以通过以下方式联系我：
-- 邮箱: example@example.com
+- 邮箱: 754287250@qq.com
