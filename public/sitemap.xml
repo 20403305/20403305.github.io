@@ -2,52 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://20403305.github.io/categories/</loc>
     <lastmod>2024-12-13T19:04:36+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://20403305.github.io/posts/</loc>
     <lastmod>2024-12-13T19:04:36+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/tutorial/</loc>
+    <loc>https://20403305.github.io/categories/tutorial/</loc>
     <lastmod>2024-12-13T19:04:36+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/my-fifth-post/</loc>
+    <loc>https://20403305.github.io/posts/my-fifth-post/</loc>
     <lastmod>2024-12-13T19:04:36+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://20403305.github.io/</loc>
     <lastmod>2024-12-13T19:04:36+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/hugo/</loc>
+    <loc>https://20403305.github.io/categories/hugo/</loc>
     <lastmod>2024-12-13T18:57:39+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/my-fourth-post/</loc>
+    <loc>https://20403305.github.io/posts/my-fourth-post/</loc>
     <lastmod>2024-12-13T18:57:39+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/my-third-post/</loc>
+    <loc>https://20403305.github.io/posts/my-third-post/</loc>
     <lastmod>2024-12-13T18:52:28+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/blog/</loc>
+    <loc>https://20403305.github.io/tags/blog/</loc>
     <lastmod>2024-12-13T12:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/hugo/</loc>
+    <loc>https://20403305.github.io/tags/hugo/</loc>
     <lastmod>2024-12-13T12:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://20403305.github.io/tags/</loc>
     <lastmod>2024-12-13T12:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/tutorial/</loc>
+    <loc>https://20403305.github.io/tags/tutorial/</loc>
     <lastmod>2024-12-13T12:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/my-second-post/</loc>
+    <loc>https://20403305.github.io/posts/my-second-post/</loc>
     <lastmod>2024-12-13T12:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://20403305.github.io/about/</loc>
     <lastmod>2024-12-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/my-first-post/</loc>
+    <loc>https://20403305.github.io/posts/my-first-post/</loc>
     <lastmod>2024-12-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/contact/</loc>
+    <loc>https://20403305.github.io/contact/</loc>
     <lastmod>2024-12-13T00:00:00+00:00</lastmod>
   </url>
 </urlset>
