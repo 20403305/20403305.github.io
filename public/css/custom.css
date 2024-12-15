@@ -3,11 +3,11 @@
 
 #fastSearch { 
     visibility: hidden; /* 初始时隐藏 */
-    position: absolute;
-    right: 0px;
-    top: 0px;
+    position: fixed;
+    right: 20%;
+    top: 11%;
     display: inline-block;
-    width: 500px;
+    width: 300px;
   }      
   
   #fastSearch input { 
@@ -15,9 +15,9 @@
     width: 100%;
     height: 31px;
     font-size: 1.6em;
-    color: #aaa;
+    color: #f6ebeb;
     font-weight: bold;
-    background-color: #fefafa;
+    background-color: #a19d9d;
     border-radius: 3px 3px 0px 0px;
     border: none;
     outline: none;
