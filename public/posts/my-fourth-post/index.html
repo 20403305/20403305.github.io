@@ -19,7 +19,7 @@
     
 
     
-<link rel="stylesheet" href="/ananke/css/main.min.a50ac17ce97eceeffc5362a79d8f09c136f9be5fa16ed88fead35c3982bf9939.css" >
+<link rel="stylesheet" href="/ananke/css/main.min.3aa011798032302d91dd701f04d3d6b1b6d95272a23e22311499f78a11ba8837.css" >
 
 
 
@@ -149,7 +149,7 @@
   <article class="flex-l flex-wrap justify-between mw8 center ph3">
     <header class="mt4 w-100">
       <aside class="instapaper_ignoref b helvetica tracked ttu">
-          
+        
         Posts
       </aside><div id="sharing" class="mt3 ananke-socials"></div>
 <h1 class="f1 athelas mt3 mb1">主题和hugo兼容问题 || 手动升级 Hugo 版本</h1>
@@ -166,7 +166,10 @@
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>从错误日志</p>
+    
+    <div class="flex-l justify-between w-100">
+      
+      <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>从错误日志</p>
 <pre tabindex="0"><code>Module &#34;ananke&#34; is not compatible with this Hugo version: Min 0.128.0; run &#34;hugo mod graph&#34; for more information.
 </code></pre><h3 id="问题原因">问题原因</h3>
 <p><code>Ananke</code> 主题要求使用 Hugo 版本至少为 <code>0.128.0</code>，而你当前使用的 Hugo 版本是 <code>v0.123.7</code>，因此会发生兼容性问题。</p>
@@ -248,9 +251,35 @@
   
 </ul>
 <div class="mt6 instapaper_ignoref">
-      
-      
+        
+        
+        </div>
       </div>
+
+      
+      <aside class="toc-container w-30-l mt6-l sticky">
+        <div class="toc-content">
+          <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#问题原因">问题原因</a></li>
+        <li><a href="#解决方法">解决方法</a></li>
+        <li><a href="#总结">总结</a></li>
+        <li><a href="#解决方法手动升级-hugo-版本">解决方法：手动升级 Hugo 版本</a></li>
+        <li><a href="#步骤-1卸载当前版本的-hugo">步骤 1：卸载当前版本的 Hugo</a></li>
+        <li><a href="#步骤-2下载最新的-hugo-版本">步骤 2：下载最新的 Hugo 版本</a></li>
+        <li><a href="#步骤-3解压并安装-hugo">步骤 3：解压并安装 Hugo</a></li>
+        <li><a href="#步骤-4验证安装">步骤 4：验证安装</a></li>
+        <li><a href="#步骤-5重启-hugo-服务">步骤 5：重启 Hugo 服务</a></li>
+        <li><a href="#总结-1">总结</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+      </aside>
+
     </div>
 
     <aside class="w-30-l mt6-l">
