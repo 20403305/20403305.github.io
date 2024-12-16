@@ -14,6 +14,9 @@ document.addEventListener('keydown', function(event) {
   
   // CMD-/ to show / hide Search
   if (event.metaKey && event.key === '/') {
+    // 补充代码，防止在触发后再输入框中输入 / 
+      event.preventDefault(); // Prevent default behavior (e.g., typing / into the input field)
+
       // Load json search index if first time invoking search
       // Means we don't load json unless searches are going to happen; keep user payload small unless needed
       if(firstRun) {
@@ -67,7 +70,10 @@ document.addEventListener('keydown', function(event) {
 });
 
 
-// Adding button trigger for search
+// ***********************人补充额外的搜索相关快捷键*************************************
+
+
+// 个人补充额外的搜索按钮
 document.getElementById("search-btn").addEventListener("click", function() {
       // Load json search index if first time invoking search
       // Means we don't load json unless searches are going to happen; keep user payload small unless needed
@@ -88,6 +94,126 @@ document.getElementById("search-btn").addEventListener("click", function() {
         searchVisible = false; // search not visible
       }
 });
+
+// 个人补充额外的搜索快捷键：空格键 + f键 + f键
+document.addEventListener('keydown', function(event) { 
+  // Check if space is pressed
+  if (event.key === ' ' && event.repeat === false) { // space key pressed
+    let fCount = 0;
+
+    // Wait for the 'f' key press twice in a row
+    const fListener = function(event) {
+      if (event.key === 'f') {
+        // Prevent 'f' from being typed into the input box
+        event.preventDefault();
+        
+        fCount++;
+        if (fCount === 2) {
+          // Trigger your action here after space + 2 'f' keys
+          if (firstRun) {
+            loadSearch(); // Load json search index
+            firstRun = false; // Don't load again
+          }
+
+          // Toggle visibility of search box
+          if (!searchVisible) {
+            document.getElementById("fastSearch").style.visibility = "visible"; // Show search box
+            document.getElementById("searchInput").focus(); // Put focus in input box
+            searchVisible = true;
+          } else {
+            document.getElementById("fastSearch").style.visibility = "hidden"; // Hide search box
+            document.activeElement.blur(); // Remove focus from search box
+            searchVisible = false;
+          }
+
+          // Remove the event listener after the sequence is handled
+          document.removeEventListener('keydown', fListener);
+        }
+      }
+    };
+
+    // Add the event listener to count 'f' key presses
+    document.addEventListener('keydown', fListener);
+  }
+});
+
+// 个人补充额外的搜索快捷键： q键 + q键
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'q' && event.repeat === false) { // Check if 'f' is pressed and not repeated
+    let currentTime = new Date().getTime(); // Get the current time
+    let lastFTime = window.lastFTime || 0; // Store the last 'f' press time, default to 0 if undefined
+    let doubleFTimeout = 500; // 500ms interval for double press
+
+    // Check if two 'f' presses happened within 500ms
+    if (lastFTime && currentTime - lastFTime <= doubleFTimeout) {
+      // Trigger your action here after two 'f' keys pressed in sequence
+      console.log("Double 'f' pressed! Showing search box");
+      event.preventDefault();
+      if (firstRun) {
+        loadSearch(); // Load json data and build the Fuse.js search index
+        firstRun = false; // Prevent loading again
+      }
+
+      // Always show the search box on double 'f' press
+      document.getElementById("fastSearch").style.visibility = "visible"; // Show search box
+      document.getElementById("searchInput").focus(); // Focus on the input box so the user can start typing immediately
+      searchVisible = true; // Mark search as visible
+
+      // Optionally, add any other action you'd like to perform on double 'f' press.
+    }
+
+    // Update lastFTime to the current time
+    window.lastFTime = currentTime;
+  }
+});
+
+
+document.addEventListener('keydown', function(event) {
+  // ALT + J to go down (next item)
+  if (event.altKey && event.key === 'j') {
+    if (searchVisible && resultsAvailable) {
+      event.preventDefault(); // Prevent default behavior (scrolling)
+
+      if (document.activeElement == maininput) {
+        first.focus(); // If focus is on the main input, focus the first search result
+      } else if (document.activeElement == last) {
+        last.focus(); // If we're at the last item, stay there
+      } else {
+        // Otherwise, move focus to the next search result
+        document.activeElement.parentElement.nextSibling.firstElementChild.focus();
+      }
+    }
+  }
+
+  // ALT + K to go up (previous item)
+  if (event.altKey && event.key === 'k') {
+    if (searchVisible && resultsAvailable) {
+      event.preventDefault(); // Prevent default behavior (scrolling)
+
+      if (document.activeElement == maininput) {
+        maininput.focus(); // If focus is on the input box, do nothing
+      } else if (document.activeElement == first) {
+        maininput.focus(); // If we're at the first item, go back to the input box
+      } else {
+        // Otherwise, move focus to the previous search result
+        document.activeElement.parentElement.previousSibling.firstElementChild.focus();
+      }
+    }
+  }
+
+});
+
+
+
+// ***********************人补充额外的搜索相关快捷键*************************************
+
+
+
+
+
+
+
+
 
 // ==========================================
 // execute search as each character is typed
