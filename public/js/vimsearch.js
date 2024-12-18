@@ -48,6 +48,11 @@ function promptForSearch() {
     if (searchQuery) {
         highlightMatches();
         showSearchInfo(); // 显示搜索框
+        // 显示向上向下按钮
+        const searchUpBtn = document.getElementById("search-match-up");
+        const searchDownBtn = document.getElementById("search-match-down");
+        if (searchUpBtn) searchUpBtn.style.display = 'block';
+        if (searchDownBtn) searchDownBtn.style.display = 'block';
     }
 }
 
@@ -166,11 +171,17 @@ function exitSearch() {
     clearAllHighlights();
     hideSearchInfo(); // 隐藏搜索框
     
+    // 隐藏向上向下按钮
+    const searchUpBtn = document.getElementById("search-match-up");
+    const searchDownBtn = document.getElementById("search-match-down");
+    if (searchUpBtn) searchUpBtn.style.display = 'none';
+    if (searchDownBtn) searchDownBtn.style.display = 'none';
+    
     // 移除所有搜索按钮的焦点
     const searchButtons = [
         document.getElementById("search-match-btn"),
-        document.getElementById("search-match-up"),
-        document.getElementById("search-match-down")
+        searchUpBtn,
+        searchDownBtn
     ];
     
     searchButtons.forEach(button => {
