@@ -177,9 +177,56 @@ Hugo 是一个非常快速的静态网站生成器，它使用 Markdown 格式�
     #searchInfo span {
         font-weight: bold;
     }
+
+    #search-match-btn {
+        color: #0357b1;
+        position: fixed;
+        right: 0;
+        top: 85%;
+        z-index: 999;
+        background-color: #d7dde1;
+        border: 1px solid #f8f9fa;
+        border-radius: 0 0 0 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    
+    #search-match-up {
+        color: #0357b1;
+        position: fixed;
+        right: 0;
+        top: 72%;
+        z-index: 999;
+        background-color: #d7dde1;
+        border: 1px solid #f8f9fa;
+        border-radius: 0 0 0 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    
+
+    #search-match-down {
+        color: #0357b1;
+        position: fixed;
+        right: 0;
+        top: 78%;
+        z-index: 999;
+        background-color: #d7dde1;
+        border: 1px solid #f8f9fa;
+        border-radius: 0 0 0 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    
+
+
 </style>
 
 <div id="searchInfo">匹配到 <span>0</span> 个内容，当前光标在第 <span>0</span> 个位置</div>
+
+<button id="search-match-btn">匹配</button>
+<button id="search-match-up">👆</button>
+<button id="search-match-down">👇</button>
 
     <main class="pb7" role="main">
       

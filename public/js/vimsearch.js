@@ -165,6 +165,19 @@ function exitSearch() {
     searchMode = false;
     clearAllHighlights();
     hideSearchInfo(); // 隐藏搜索框
+    
+    // 移除所有搜索按钮的焦点
+    const searchButtons = [
+        document.getElementById("search-match-btn"),
+        document.getElementById("search-match-up"),
+        document.getElementById("search-match-down")
+    ];
+    
+    searchButtons.forEach(button => {
+        if (button) {
+            button.blur(); // 移除按钮焦点
+        }
+    });
 }
 
 
@@ -230,3 +243,38 @@ function scrollPage(direction) {
         behavior: 'smooth'
     });
 }
+
+// 修改按钮监听部分
+function initSearchButtons() {
+    // 搜索按钮
+    const searchBtn = document.getElementById("search-match-btn");
+    if (searchBtn) {
+        searchBtn.addEventListener("click", function() {
+            searchMode = true;
+            promptForSearch();
+        });
+    }
+
+    // 向上搜索按钮
+    const searchUpBtn = document.getElementById("search-match-up");
+    if (searchUpBtn) {
+        searchUpBtn.addEventListener("click", function() {
+            if (searchMode && matches.length > 0) {
+                jumpToPreviousMatch();
+            }
+        });
+    }
+
+    // 向下搜索按钮
+    const searchDownBtn = document.getElementById("search-match-down");
+    if (searchDownBtn) {
+        searchDownBtn.addEventListener("click", function() {
+            if (searchMode && matches.length > 0) {
+                jumpToNextMatch();
+            }
+        });
+    }
+}
+
+// 在页面加载完成后初始化按钮
+document.addEventListener('DOMContentLoaded', initSearchButtons);
