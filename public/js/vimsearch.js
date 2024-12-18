@@ -1,18 +1,44 @@
 let searchQuery = ''; // 当前的搜索词
 let matches = []; // 存储匹配项的DOM元素
 let currentMatchIndex = -1; // 当前匹配项的索引
+let searchMode = false; // 用于跟踪是否在搜索模式
 
 // 监听键盘事件
 document.addEventListener('keydown', function(event) {
+    // 如果正在输入（比如在输入框中），则不处理快捷键
+    if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA') {
+        return;
+    }
+
     if (event.key === '/') {
-        event.preventDefault(); // 阻止默认行为
+        event.preventDefault();
+        searchMode = true;
         promptForSearch();
-    } else if (event.key === 'n') {
-        jumpToNextMatch();
-    } else if (event.key === 'N') {
-        jumpToPreviousMatch();
-    } else if (event.key === 'Escape') {
-        exitSearch();
+    } else if (searchMode) {
+        // 搜索模式下的快捷键
+        if (event.key === 'n') {
+            jumpToNextMatch();
+        } else if (event.key === 'N') {
+            jumpToPreviousMatch();
+        } else if (event.key === 'Escape') {
+            exitSearch();
+            searchMode = false;
+        }
+    } else {
+        // 非搜索模式下的导航快捷键
+        if (event.key.toLowerCase() === 'j') {
+            event.preventDefault();
+            scrollPage('down');
+        } else if (event.key.toLowerCase() === 'k') {
+            event.preventDefault();
+            scrollPage('up');
+        } else if (event.key === 'G') {
+            event.preventDefault();
+            scrollToBottom();
+        } else if (event.key === 'g') {
+            event.preventDefault();
+            handleGKey(event);
+        }
     }
 });
 
@@ -136,6 +162,7 @@ function clearAllHighlights() {
 // 退出搜索，移除高亮
 function exitSearch() {
     searchQuery = '';
+    searchMode = false;
     clearAllHighlights();
     hideSearchInfo(); // 隐藏搜索框
 }
@@ -158,4 +185,48 @@ function showSearchInfo() {
 // 隐藏搜索框
 function hideSearchInfo() {
     document.getElementById('searchInfo').style.display = 'none';
+}
+
+let lastGKeyTime = 0;
+const doubleKeyTimeout = 300; // 300毫秒内按两次g键才触发
+
+// 处理g键的按压
+function handleGKey(event) {
+    const currentTime = new Date().getTime();
+    if (currentTime - lastGKeyTime <= doubleKeyTimeout) {
+        // 双击g，跳转到顶部
+        scrollToTop();
+        lastGKeyTime = 0; // 重置时间
+    } else {
+        lastGKeyTime = currentTime;
+    }
+}
+
+// 滚动到顶部
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+// 滚动到底部
+function scrollToBottom() {
+    window.scrollTo({
+        top: document.documentElement.scrollHeight,
+        behavior: 'smooth'
+    });
+}
+
+// 页面滚动
+function scrollPage(direction) {
+    const scrollDistance = window.innerHeight * 0.8; // 滚动页面高度的80%
+    const currentScroll = window.pageYOffset;
+    
+    window.scrollTo({
+        top: direction === 'down' 
+            ? currentScroll + scrollDistance 
+            : currentScroll - scrollDistance,
+        behavior: 'smooth'
+    });
 }
