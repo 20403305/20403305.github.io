@@ -31,21 +31,54 @@ function highlightMatches() {
     clearAllHighlights();
 
     // 使用不区分大小写的正则表达式
-    const textNodes = getTextNodesInDocument();
-    matches = [];
-    const matchRegex = new RegExp(searchQuery, 'gi'); // 添加 'i' 以实现不区分大小写的匹配
-    textNodes.forEach(node => {
-        let match;
-        while ((match = matchRegex.exec(node.textContent)) !== null) {
-            const range = document.createRange();
-            range.setStart(node, match.index);
-            range.setEnd(node, match.index + match[0].length);
-            const span = document.createElement('span');
-            span.className = 'highlight';
-            range.surroundContents(span);
-            matches.push(span);
+    const matchRegex = new RegExp(searchQuery, 'gi');
+    
+    // 递归遍历所有节点
+    function searchInNode(node) {
+        if (node.nodeType === Node.TEXT_NODE) {
+            const content = node.textContent;
+            if (matchRegex.test(content)) {
+                // 重置正则表达式的lastIndex
+                matchRegex.lastIndex = 0;
+                
+                const fragment = document.createDocumentFragment();
+                let lastIndex = 0;
+                let match;
+                
+                while ((match = matchRegex.exec(content)) !== null) {
+                    // 添加匹配前的文本
+                    if (match.index > lastIndex) {
+                        fragment.appendChild(document.createTextNode(content.slice(lastIndex, match.index)));
+                    }
+                    
+                    // 创建高亮span
+                    const span = document.createElement('span');
+                    span.className = 'highlight';
+                    span.textContent = match[0];
+                    fragment.appendChild(span);
+                    matches.push(span);
+                    
+                    lastIndex = matchRegex.lastIndex;
+                }
+                
+                // 添加剩余的文本
+                if (lastIndex < content.length) {
+                    fragment.appendChild(document.createTextNode(content.slice(lastIndex)));
+                }
+                
+                // 替换原始节点
+                node.parentNode.replaceChild(fragment, node);
+            }
+        } else if (node.nodeType === Node.ELEMENT_NODE && 
+                   !['script', 'style', 'textarea'].includes(node.tagName.toLowerCase())) {
+            // 递归处理子节点
+            Array.from(node.childNodes).forEach(searchInNode);
         }
-    });
+    }
+
+    // 从 body 开始搜索
+    searchInNode(document.body);
+
     // 更新搜索框的匹配信息
     updateSearchInfo();
 
@@ -56,17 +89,6 @@ function highlightMatches() {
     } else {
         alert("没有找到匹配的内容");
     }
-}
-
-// 获取页面中所有的文本节点
-function getTextNodesInDocument() {
-    const textNodes = [];
-    const walk = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
-    let node;
-    while ((node = walk.nextNode())) {
-        textNodes.push(node);
-    }
-    return textNodes;
 }
 
 // 跳转到下一个匹配项
@@ -101,12 +123,14 @@ function highlightCurrentMatch() {
 
 // 清除所有高亮
 function clearAllHighlights() {
-    matches.forEach(match => {
-        match.classList.remove('highlight');
-        match.style.backgroundColor = ''; // 清除背景颜色
-        });
+    const highlights = document.querySelectorAll('.highlight');
+    highlights.forEach(highlight => {
+        const parent = highlight.parentNode;
+        parent.replaceChild(document.createTextNode(highlight.textContent), highlight);
+        parent.normalize(); // 合并相邻的文本节点
+    });
     matches = [];
-    currentMatchIndex = -1; // 重置匹配项索引
+    currentMatchIndex = -1;
 }
 
 // 退出搜索，移除高亮
