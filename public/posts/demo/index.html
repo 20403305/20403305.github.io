@@ -167,6 +167,32 @@ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/anan
 
 <script src="js/fastsearch.js"></script>
 
+    <style>
+    .highlight {
+        background-color: yellow;
+    }
+     
+    #searchInfo {
+        position: fixed;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 8px 16px;
+        border-radius: 4px;
+        font-size: 14px;
+        z-index: 1000;  
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        display: none;  
+    }
+    #searchInfo span {
+        font-weight: bold;
+    }
+</style>
+
+<div id="searchInfo">匹配到 <span>0</span> 个内容，当前光标在第 <span>0</span> 个位置</div>
+
     <main class="pb7" role="main">
       
   
@@ -191,6 +217,8 @@ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/anan
       
     </header>
     
+    <div id="searchInfo">匹配到 <span>0</span> 个内容，当前光标在第 <span>0</span> 个位置</div>
+
     <div class="flex-l justify-between w-100">
       
       <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="欢迎阅读这篇文章">欢迎阅读这篇文章</h1>

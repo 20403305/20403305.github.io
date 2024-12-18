@@ -139,6 +139,32 @@
 
 <script src="js/fastsearch.js"></script>
 
+    <style>
+    .highlight {
+        background-color: yellow;
+    }
+     
+    #searchInfo {
+        position: fixed;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 8px 16px;
+        border-radius: 4px;
+        font-size: 14px;
+        z-index: 1000;  
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        display: none;  
+    }
+    #searchInfo span {
+        font-weight: bold;
+    }
+</style>
+
+<div id="searchInfo">匹配到 <span>0</span> 个内容，当前光标在第 <span>0</span> 个位置</div>
+
     <main class="pb7" role="main">
       
   <div class="flex-l mt2 mw8 center">

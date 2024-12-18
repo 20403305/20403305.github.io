@@ -101,9 +101,10 @@ function highlightCurrentMatch() {
 
 // 清除所有高亮
 function clearAllHighlights() {
-    matches.forEach(match => {
-        match.classList.remove('highlight');
-        match.style.backgroundColor = ''; // 清除背景颜色
+        // 移除所有高亮 span 标签
+        const highlightedElements = document.querySelectorAll('.highlight');
+        highlightedElements.forEach(element => {
+            element.replaceWith(...element.childNodes); // 替换 span 标签为其子节点
         });
     matches = [];
     currentMatchIndex = -1; // 重置匹配项索引

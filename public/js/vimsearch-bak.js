@@ -20,32 +20,51 @@ document.addEventListener('keydown', function(event) {
 function promptForSearch() {
     searchQuery = prompt("请输入搜索内容:");
     if (searchQuery) {
-        highlightMatches();
+            highlightMatches(); // 执行匹配并高亮
         showSearchInfo(); // 显示搜索框
     }
 }
+
+
 
 // 高亮页面中所有匹配的文本
 function highlightMatches() {
     // 清除之前的高亮
     clearAllHighlights();
-
-    // 使用不区分大小写的正则表达式
+    
+    // 获取所有文本节点并克隆文档结构
     const textNodes = getTextNodesInDocument();
     matches = [];
-    const matchRegex = new RegExp(searchQuery, 'gi'); // 添加 'i' 以实现不区分大小写的匹配
+    
+    // 使用不区分大小写的正则表达式
+    const matchRegex = new RegExp(searchQuery, 'gi');
+    
+    // 使用数组存储所有需要处理的匹配信息
+    const matchInfos = [];
     textNodes.forEach(node => {
+        const text = node.textContent;
         let match;
-        while ((match = matchRegex.exec(node.textContent)) !== null) {
-            const range = document.createRange();
-            range.setStart(node, match.index);
-            range.setEnd(node, match.index + match[0].length);
-            const span = document.createElement('span');
-            span.className = 'highlight';
-            range.surroundContents(span);
-            matches.push(span);
+        while ((match = matchRegex.exec(text)) !== null) {
+            matchInfos.push({
+                node: node,
+                startIndex: match.index,
+                endIndex: match.index + match[0].length
+            });
         }
     });
+
+    // 从后向前处理匹配，避免索引位置变化
+    matchInfos.sort((a, b) => b.startIndex - a.startIndex);
+    matchInfos.forEach(info => {
+        const range = document.createRange();
+        range.setStart(info.node, info.startIndex);
+        range.setEnd(info.node, info.endIndex);
+        const span = document.createElement('span');
+        span.className = 'highlight';
+        range.surroundContents(span);
+        matches.unshift(span); // 添加到数组开头以保持正确顺序
+    });
+
     // 更新搜索框的匹配信息
     updateSearchInfo();
 
@@ -58,12 +77,28 @@ function highlightMatches() {
     }
 }
 
+
 // 获取页面中所有的文本节点
 function getTextNodesInDocument() {
     const textNodes = [];
-    const walk = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+    const walk = document.createTreeWalker(
+        document.body,
+        NodeFilter.SHOW_TEXT,
+        {
+            acceptNode: function(node) {
+                // 排除script标签内的文本和空白文本
+                if (node.parentNode.nodeName === 'SCRIPT' || 
+                    node.textContent.trim() === '') {
+                    return NodeFilter.FILTER_REJECT;
+                }
+                return NodeFilter.FILTER_ACCEPT;
+            }
+        },
+        false
+    );
+    
     let node;
-    while ((node = walk.nextNode())) {
+    while (node = walk.nextNode()) {
         textNodes.push(node);
     }
     return textNodes;
@@ -101,12 +136,13 @@ function highlightCurrentMatch() {
 
 // 清除所有高亮
 function clearAllHighlights() {
-    matches.forEach(match => {
-        match.classList.remove('highlight');
-        match.style.backgroundColor = ''; // 清除背景颜色
+        // 移除所有高亮 span 标签
+        const highlightedElements = document.querySelectorAll('.highlight');
+        highlightedElements.forEach(element => {
+            element.replaceWith(...element.childNodes); // 替换 span 标签为其子节点
         });
-    matches = [];
-    currentMatchIndex = -1; // 重置匹配项索引
+        matches = []; // 清空匹配项数组
+        currentMatchIndex = -1; // 重置当前匹配项索引
 }
 
 // 退出搜索，移除高亮
