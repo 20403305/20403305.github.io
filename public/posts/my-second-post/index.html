@@ -286,7 +286,10 @@ Hugo 是一个非常快速的静态网站生成器，它使用 Markdown 格式�
     </header>
     
     <div id="searchInfo">匹配到 <span>0</span> 个内容，当前光标在第 <span>0</span> 个位置</div>
-
+    
+    <div class="meta-busuanzi">&nbsp·&nbsp
+    <span id="busuanzi_container_page_pv">本文阅读量<span id="busuanzi_value_page_pv">0</span>次</span>
+</div>
     <div class="flex-l justify-between w-100">
       
       <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="我的第一篇博客">我的第一篇博客</h1>
@@ -350,7 +353,35 @@ Hugo 是一个非常快速的静态网站生成器，它使用 Markdown 格式�
 
     </main>
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
+  
+  <div id="site-counter" style="
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    background-color: #e8eef5;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 11px;
+    color: #0357b1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #d0d7de;
+    z-index: 999;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.4;
+">
+    <span id="busuanzi_container_site_pv" style="margin-bottom: 4px;">
+        总访问量 <span id="busuanzi_value_site_pv" style="font-weight: 600;"></span> 次
+    </span>
+    
+    <span id="busuanzi_container_site_uv" style="margin-top: 4px;">
+        访客数 <span id="busuanzi_value_site_uv" style="font-weight: 600;"></span> 人
+    </span>
+</div>
+
+<div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://20403305.github.io/" >
     &copy;  资料库 2024 
   </a>
@@ -369,3 +400,9 @@ Hugo 是一个非常快速的静态网站生成器，它使用 Markdown 格式�
 </div>
 <script src="/js/fuse.js"></script> 
 <script src="/js/fastsearch.js"></script>
+
+  <script async src="/js/busuanzi.pure.mini.js"></script>
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  
+   
+  <script src="/js/counter-format.js"></script>

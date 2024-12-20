@@ -49,6 +49,9 @@ theme = "ananke"  # 这里根据你的主题来设置
 [params.search]
   enable = true  # 启用搜索功能
 
+[params.busuanzi] 
+    enable = true # 启用不蒜子Busuanzi流量统计
+
 [markup]
   [markup.tableOfContents]
     enable = true          # 启用目录

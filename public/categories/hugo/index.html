@@ -130,7 +130,7 @@
       gtag('config', 'G-3ES96XM22P');
     </script>
     
-    
+
 
   </header>
 
@@ -298,7 +298,35 @@
 
     </main>
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
+  
+  <div id="site-counter" style="
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    background-color: #e8eef5;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 11px;
+    color: #0357b1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #d0d7de;
+    z-index: 999;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.4;
+">
+    <span id="busuanzi_container_site_pv" style="margin-bottom: 4px;">
+        总访问量 <span id="busuanzi_value_site_pv" style="font-weight: 600;"></span> 次
+    </span>
+    
+    <span id="busuanzi_container_site_uv" style="margin-top: 4px;">
+        访客数 <span id="busuanzi_value_site_uv" style="font-weight: 600;"></span> 人
+    </span>
+</div>
+
+<div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://20403305.github.io/" >
     &copy;  资料库 2024 
   </a>
@@ -317,3 +345,9 @@
 </div>
 <script src="/js/fuse.js"></script> 
 <script src="/js/fastsearch.js"></script>
+
+  <script async src="/js/busuanzi.pure.mini.js"></script>
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  
+   
+  <script src="/js/counter-format.js"></script>
