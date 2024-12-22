@@ -16,7 +16,7 @@ theme = "ananke"  # 这里根据你的主题来设置
   googleAnalytics = "G-3ES96XM22P"  # 替换成你的 Google Analytics 跟踪 ID
   baseURL = "https://20403305.github.io/"  # 默认值
   enableToc = true  # 启用目录
-
+  recent_posts_number = 10 # 显示最近文章的数量
 
 [production]
   baseURL = "https://20403305.github.io"  # 生产环境
