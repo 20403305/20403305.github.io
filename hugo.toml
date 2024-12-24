@@ -3,7 +3,6 @@ baseURL = "https://20403305.github.io/"
 title = "资料库"
 languageCode = "zh-CN"  # 设置为中文
 theme = "ananke"  # 这里根据你的主题来设置
-
 # 配置导航栏等内容
 [params]
   description = "欢迎访问我的博客！"
@@ -17,6 +16,7 @@ theme = "ananke"  # 这里根据你的主题来设置
   baseURL = "https://20403305.github.io/"  # 默认值
   enableToc = true  # 启用目录
   recent_posts_number = 10 # 显示最近文章的数量
+  featured_image = "/images/gohugo-default-sample-hero-image.jpg"  # 设置首页的特色图片
 
 [production]
   baseURL = "https://20403305.github.io"  # 生产环境
