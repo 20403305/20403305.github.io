@@ -64,5 +64,12 @@
       <guid>https://20403305.github.io/contact/</guid>
       <description>你可以通过以下方式联系我：&#xA;邮箱: 754287250@qq.com </description>
     </item>
+    <item>
+      <title>测试文章</title>
+      <link>https://20403305.github.io/posts/test/</link>
+      <pubDate>Thu, 14 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://20403305.github.io/posts/test/</guid>
+      <description>这是一篇测试文章的内容。</description>
+    </item>
   </channel>
 </rss>
