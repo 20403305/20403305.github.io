@@ -101,20 +101,21 @@ theme = "ananke"  # 这里根据你的主题来设置
 #   languageCode = "zh"
 
 # 参考anake主题的配置文件 config/_default/params.toml
+# 显示在某篇文章
 [params.ananke.social.share]
 networks = [
-      "telegram",
-    "github",
+  "telegram",
+  "github",
   "email",
   "facebook",
   "bluesky",
   "linkedin"
 ]
-
+# 显示在首页
 [params.ananke.social.follow]
 networks = [
-    "telegram",
-    "github",
+  "telegram",
+  "github",
   "facebook",
   "bluesky",
   "linkedin"
