@@ -99,3 +99,49 @@ theme = "ananke"  # 这里根据你的主题来设置
 #   contentDir = "content/posts"
 #   title = "我的中文博客"
 #   languageCode = "zh"
+
+# 参考anake主题的配置文件 config/_default/params.toml
+[params.ananke.social.share]
+networks = [
+      "telegram",
+    "github",
+  "email",
+  "facebook",
+  "bluesky",
+  "linkedin"
+]
+
+[params.ananke.social.follow]
+networks = [
+    "telegram",
+    "github",
+  "facebook",
+  "bluesky",
+  "linkedin"
+]
+
+[[ananke.social.networks]]
+slug = "github"
+label = "GitHub"
+color = "#6cc644"
+profile = "https://github.com/%s/"
+icon = "github" # font awesome brand icon name
+
+[[ananke.social.networks]]
+slug = "telegram"
+label = "Telegram"
+color = "#0088cc"
+profile = "https://t.me/%s"
+icon = "telegram" # font awesome brand icon name
+link = "https://telegram.me/share/url"
+
+
+[params.ananke.social.facebook]
+username = "patrick.kollitsch"
+# profilelink = "https://www.facebook.com/patrick.kollitsch"
+
+[params.ananke.social.linkedin]
+username = "patrickkollitsch"
+
+[params.ananke.social.bluesky]
+username = "kollitsch.dev"
