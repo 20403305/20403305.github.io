@@ -5,6 +5,7 @@ tags: ["Hugo", "目录", "Markdown"]
 categories: ["测试"]
 
 featured_image: "/images/gohugo-default-sample-hero-image.jpg"
+summary: "本篇文章将展示如何为 Hugo 网站配置目录，并验证是否能正确显示在页面上。"
 ---
 
 # 欢迎阅读这篇文章

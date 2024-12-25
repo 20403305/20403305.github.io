@@ -5,7 +5,7 @@
     <link>https://20403305.github.io/posts/</link>
     <description>Recent content in Posts on 资料库</description>
     <generator>Hugo</generator>
-    <language>zh-CN</language>
+    <language>zh</language>
     <lastBuildDate>Mon, 16 Dec 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://20403305.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,7 +13,7 @@
       <link>https://20403305.github.io/posts/demo/</link>
       <pubDate>Mon, 16 Dec 2024 00:00:00 +0000</pubDate>
       <guid>https://20403305.github.io/posts/demo/</guid>
-      <description>欢迎阅读这篇文章 这是一篇测试文章，用来检查在 Hugo 主题中是否能正确显示目录。&#xA;1. 引言 本篇文章将展示如何为 Hugo 网站配置目录，并验证是否能正确显示在页面上。&#xA;1.1 什么是 Hugo？ Hugo 是一个快速的静态站点生成器。它通过使用简单的 Markdown 文件来生成网站内容。Hugo 的速度非常快，适合用来构建各种类型的静态网站。&#xA;1.2 主题目录 在 Hugo 中，主题通常会提供用于显示目录的功能。目录是一个自动生成的导航工具，能帮助用户快速跳转到文章的不同部分。&#xA;2. 配置 Hugo 主题 2.1 安装主题 首先，你需要安装一个支持目录功能的 Hugo 主题。在 Hugo 的官方文档中有很多可用的主题，选择一个适合你的需求的主题并安装。&#xA;git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke </description>
+      <description>本篇文章将展示如何为 Hugo 网站配置目录，并验证是否能正确显示在页面上。</description>
     </item>
     <item>
       <title>如何在github action中配置hugo</title>
@@ -41,7 +41,7 @@
       <link>https://20403305.github.io/posts/my-second-post/</link>
       <pubDate>Fri, 13 Dec 2024 12:00:00 +0800</pubDate>
       <guid>https://20403305.github.io/posts/my-second-post/</guid>
-      <description>我的第一篇博客 欢迎来到我的博客网站！这是我使用 Hugo 搭建的个人博客。&#xA;Hugo 是一个非常快速的静态网站生成器，它使用 Markdown 格式写作，支持丰富的功能和主题，非常适合用来创建个人博客。&#xA;关于 Hugo Hugo 是一个快速且灵活的静态网站生成器。它非常适合用来构建个人博客、公司网站、项目展示等各种网站。</description>
+      <description>&lt;h1 id=&#34;我的第一篇博客&#34;&gt;我的第一篇博客&lt;/h1&gt;&#xA;&lt;p&gt;欢迎来到我的博客网站！这是我使用 Hugo 搭建的个人博客。&lt;/p&gt;&#xA;&lt;p&gt;Hugo 是一个非常快速的静态网站生成器，它使用 Markdown 格式写作，支持丰富的功能和主题，非常适合用来创建个人博客。&lt;/p&gt;&#xA;&lt;h2 id=&#34;关于-hugo&#34;&gt;关于 Hugo&lt;/h2&gt;&#xA;&lt;p&gt;Hugo 是一个快速且灵活的静态网站生成器。它非常适合用来构建个人博客、公司网站、项目展示等各种网站。&lt;/p&gt;</description>
     </item>
     <item>
       <title>我的第一篇博客文章</title>
@@ -55,7 +55,7 @@
       <link>https://20403305.github.io/posts/test/</link>
       <pubDate>Thu, 14 Mar 2024 00:00:00 +0000</pubDate>
       <guid>https://20403305.github.io/posts/test/</guid>
-      <description>这是一篇测试文章的内容。</description>
+      <description>&lt;p&gt;这是一篇测试文章的内容。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

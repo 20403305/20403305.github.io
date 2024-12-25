@@ -1,7 +1,7 @@
 # 网站的基本设置
 baseURL = "https://20403305.github.io/"
 title = "资料库"
-languageCode = "zh-CN"  # 设置为中文
+languageCode = "zh"  # 设置为中文
 theme = "ananke"  # 这里根据你的主题来设置
 # 配置导航栏等内容
 [params]
@@ -81,8 +81,8 @@ theme = "ananke"  # 这里根据你的主题来设置
   term = ['html', 'rss']
 
 
-# defaultContentLanguage = "zh-CN"
-# languages = ["en", "zh-CN"]
+# defaultContentLanguage = "zh"
+# languages = ["en", "zh"]
 # 
 # [languages.en]
 #   languageName = "English"
@@ -92,10 +92,10 @@ theme = "ananke"  # 这里根据你的主题来设置
 #   title = "My English Blog"
 #   languageCode = "en"
 # 
-# [languages.zh-CN]
+# [languages.zh]
 #   languageName = "中文"
 #   weight = 2
 #   # contentDir = "content/zh"
 #   contentDir = "content/posts"
 #   title = "我的中文博客"
-#   languageCode = "zh-CN"
+#   languageCode = "zh"
