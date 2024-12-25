@@ -9,7 +9,7 @@ theme = "ananke"  # 这里根据你的主题来设置
   author = "小苏同志"
   enableSearch = true  # 启用搜索功能
   # 设置日期格式
-  dateFormat = "2006年01月02日"  # 例如: "2024年12月13日"
+  date_format  = "2006年01月02日"  # 例如: "2024年12月13日"
   mainMenu = ["Home", "About", "Blog"]
   enableRobotsTXT = true # 允许所有搜索引擎爬虫抓取站点
   googleAnalytics = "G-3ES96XM22P"  # 替换成你的 Google Analytics 跟踪 ID
@@ -17,6 +17,7 @@ theme = "ananke"  # 这里根据你的主题来设置
   enableToc = true  # 启用目录
   recent_posts_number = 10 # 显示最近文章的数量
   featured_image = "/images/gohugo-default-sample-hero-image.jpg"  # 设置首页的特色图片
+  site_logo = "img/logo.svg"
 
 [production]
   baseURL = "https://20403305.github.io"  # 生产环境

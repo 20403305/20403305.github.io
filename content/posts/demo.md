@@ -3,6 +3,8 @@ title: "测试文章：Hugo 目录显示"
 date: 2024-12-16
 tags: ["Hugo", "目录", "Markdown"]
 categories: ["测试"]
+
+featured_image: "/images/gohugo-default-sample-hero-image.jpg"
 ---
 
 # 欢迎阅读这篇文章
