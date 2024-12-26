@@ -1,61 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>资料库</title>
-    <link>https://20403305.github.io/</link>
-    <description>Recent content on 资料库</description>
+    <title>关于我 on 资料库</title>
+    <link>https://20403305.github.io/tags/%E5%85%B3%E4%BA%8E%E6%88%91/</link>
+    <description>Recent content in 关于我 on 资料库</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Thu, 26 Dec 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://20403305.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://20403305.github.io/tags/%E5%85%B3%E4%BA%8E%E6%88%91/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>关于我</title>
       <link>https://20403305.github.io/about/</link>
       <pubDate>Thu, 26 Dec 2024 00:00:00 +0000</pubDate>
       <guid>https://20403305.github.io/about/</guid>
       <description>&lt;h2 id=&#34;你好我是苏宇新&#34;&gt;你好，我是苏宇新&lt;/h2&gt;&#xA;&lt;p&gt;欢迎来到我的博客！我是一个热衷于没事喜欢瞎折腾的程序员，喜欢探索技术的无穷可能性。这个博客是我分享技术、生活以及个人成长的地方。希望通过这里的内容，能够帮助到其他对技术和编程有兴趣的朋友。&lt;/p&gt;&#xA;&lt;h2 id=&#34;我的背景&#34;&gt;我的背景&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;姓名&lt;/strong&gt;：苏宇新&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;职位&lt;/strong&gt;：后端开发工程师&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;专业&lt;/strong&gt;：人工智能与数据分析&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;学校&lt;/strong&gt;：中山大学新华学院&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;学位&lt;/strong&gt;：本科&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;兴趣爱好&lt;/strong&gt;：编程、摄影（记录生活）、运动&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;我的经历&#34;&gt;我的经历&lt;/h2&gt;&#xA;&lt;p&gt;我在 &lt;strong&gt;XXX&lt;/strong&gt; 担任 &lt;strong&gt;后端开发工程师&lt;/strong&gt;，负责开发和维护公司网站后台，给AI团队赋能，优化RAG系统链路和AI知识库问答效果。通过与团队成员的紧密合作，我积累了丰富的开发经验。&lt;/p&gt;&#xA;&lt;h2 id=&#34;为什么写博客&#34;&gt;为什么写博客？&lt;/h2&gt;&#xA;&lt;p&gt;我写博客的初衷是希望通过分享自己在编程和技术方面的经验，帮助更多的人学习和进步。除了技术分享，我也会写一些关于个人成长和生活方式的文章，帮助自己成长的同时也能激励他人。&lt;/p&gt;&#xA;&lt;h2 id=&#34;联系我&#34;&gt;联系我&lt;/h2&gt;&#xA;&lt;p&gt;如果你有任何问题，或者对我的博客内容有任何建议，欢迎通过以下方式联系我：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Email&lt;/strong&gt;: &lt;a href=&#34;mailto:754287250@qq.com&#34;&gt;754287250@qq.com&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;GitHub&lt;/strong&gt;: &lt;a href=&#34;https://github.com/20403305&#34;&gt;github.com/20403305&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;我的技术栈&#34;&gt;我的技术栈&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;前端框架&lt;/strong&gt;：Sails&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;后端框架&lt;/strong&gt;：Django, Flask&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;编程语言&lt;/strong&gt;：Python, Go, JavaScript&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;开发工具&lt;/strong&gt;：VsCode, PyCharm, Postman, Navicat&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;版本控制&lt;/strong&gt;：Git, GitHub&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;其他技术&lt;/strong&gt;：Docker, MySQL, Redis, Nginx&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;个人目标&#34;&gt;个人目标&lt;/h2&gt;&#xA;&lt;p&gt;在接下来的几年里，我希望能提升自己的技术深度，并且通过开源项目与社区分享我的技术成果。同时，我也希望能够更好地平衡工作与生活，探索更多有趣的事物。&lt;/p&gt;&#xA;&lt;p&gt;感谢你访问我的博客，期待在这里与你的交流与分享！&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Hugo 显示目录和图片</title>
-      <link>https://20403305.github.io/posts/hugo-%E7%9B%AE%E5%BD%95%E6%98%BE%E7%A4%BA/</link>
-      <pubDate>Mon, 16 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://20403305.github.io/posts/hugo-%E7%9B%AE%E5%BD%95%E6%98%BE%E7%A4%BA/</guid>
-      <description>本篇文章将展示如何为 Hugo 网站配置目录，并验证是否能正确显示在页面上。</description>
-    </item>
-    <item>
-      <title>如何在github action中配置hugo</title>
-      <link>https://20403305.github.io/posts/%E5%A6%82%E4%BD%95%E5%9C%A8github-action%E4%B8%AD%E9%85%8D%E7%BD%AEhugo/</link>
-      <pubDate>Fri, 13 Dec 2024 19:04:36 +0800</pubDate>
-      <guid>https://20403305.github.io/posts/%E5%A6%82%E4%BD%95%E5%9C%A8github-action%E4%B8%AD%E9%85%8D%E7%BD%AEhugo/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>主题和hugo兼容问题 || 手动升级 Hugo 版本</title>
-      <link>https://20403305.github.io/posts/%E4%B8%BB%E9%A2%98%E5%92%8Chugo%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98/</link>
-      <pubDate>Fri, 13 Dec 2024 18:57:39 +0800</pubDate>
-      <guid>https://20403305.github.io/posts/%E4%B8%BB%E9%A2%98%E5%92%8Chugo%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98/</guid>
-      <description>升级 Hugo</description>
-    </item>
-    <item>
-      <title>ubuntu liunx 如何用Hugo来搭建个人博客网站</title>
-      <link>https://20403305.github.io/posts/%E5%A6%82%E4%BD%95%E7%94%A8hugo%E6%9D%A5%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/</link>
-      <pubDate>Fri, 13 Dec 2024 18:52:28 +0800</pubDate>
-      <guid>https://20403305.github.io/posts/%E5%A6%82%E4%BD%95%E7%94%A8hugo%E6%9D%A5%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/</guid>
-      <description>安装Hugo</description>
-    </item>
-    <item>
-      <title>我的第二篇博客</title>
-      <link>https://20403305.github.io/posts/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/</link>
-      <pubDate>Fri, 13 Dec 2024 12:00:00 +0800</pubDate>
-      <guid>https://20403305.github.io/posts/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/</guid>
-      <description>&lt;h1 id=&#34;我的第二篇博客&#34;&gt;我的第二篇博客&lt;/h1&gt;&#xA;&lt;p&gt;欢迎来到我的博客网站！这是我使用 Hugo 搭建的个人博客。&lt;/p&gt;&#xA;&lt;p&gt;Hugo 是一个非常快速的静态网站生成器，它使用 Markdown 格式写作，支持丰富的功能和主题，非常适合用来创建个人博客。&lt;/p&gt;&#xA;&lt;h2 id=&#34;关于-hugo&#34;&gt;关于 Hugo&lt;/h2&gt;&#xA;&lt;p&gt;Hugo 是一个快速且灵活的静态网站生成器。它非常适合用来构建个人博客、公司网站、项目展示等各种网站。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>我的第一篇博客文章</title>
-      <link>https://20403305.github.io/posts/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</link>
-      <pubDate>Fri, 13 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://20403305.github.io/posts/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</guid>
-      <description>This is a short summary of the article.</description>
     </item>
     <item>
       <title>联系我</title>

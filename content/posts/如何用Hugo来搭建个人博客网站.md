@@ -4,6 +4,7 @@ date = 2024-12-13T18:52:28+08:00
 summary = "安装Hugo"
 draft = false
 categories = ["Tutorial"]
+tags = ['Hugo']
 +++
 
 

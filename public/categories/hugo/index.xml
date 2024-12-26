@@ -10,9 +10,9 @@
     <atom:link href="https://20403305.github.io/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>主题和hugo兼容问题 || 手动升级 Hugo 版本</title>
-      <link>https://20403305.github.io/posts/my-fourth-post/</link>
+      <link>https://20403305.github.io/posts/%E4%B8%BB%E9%A2%98%E5%92%8Chugo%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98/</link>
       <pubDate>Fri, 13 Dec 2024 18:57:39 +0800</pubDate>
-      <guid>https://20403305.github.io/posts/my-fourth-post/</guid>
+      <guid>https://20403305.github.io/posts/%E4%B8%BB%E9%A2%98%E5%92%8Chugo%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98/</guid>
       <description>升级 Hugo</description>
     </item>
   </channel>

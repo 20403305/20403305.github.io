@@ -2,70 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://20403305.github.io/tags/</loc>
+    <lastmod>2024-12-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://20403305.github.io/tags/%E5%85%B3%E4%BA%8E%E6%88%91/</loc>
+    <lastmod>2024-12-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://20403305.github.io/about/</loc>
+    <lastmod>2024-12-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://20403305.github.io/</loc>
+    <lastmod>2024-12-26T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://20403305.github.io/categories/</loc>
     <lastmod>2024-12-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://20403305.github.io/tags/hugo/</loc>
     <lastmod>2024-12-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://20403305.github.io/tags/markdown/</loc>
+    <loc>https://20403305.github.io/posts/hugo-%E7%9B%AE%E5%BD%95%E6%98%BE%E7%A4%BA/</loc>
     <lastmod>2024-12-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://20403305.github.io/posts/</loc>
     <lastmod>2024-12-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://20403305.github.io/tags/</loc>
-    <lastmod>2024-12-16T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://20403305.github.io/categories/%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2024-12-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://20403305.github.io/posts/demo/</loc>
-    <lastmod>2024-12-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://20403305.github.io/tags/%E7%9B%AE%E5%BD%95/</loc>
-    <lastmod>2024-12-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://20403305.github.io/</loc>
     <lastmod>2024-12-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://20403305.github.io/categories/tutorial/</loc>
     <lastmod>2024-12-13T19:04:36+08:00</lastmod>
   </url><url>
-    <loc>https://20403305.github.io/posts/my-fifth-post/</loc>
+    <loc>https://20403305.github.io/posts/%E5%A6%82%E4%BD%95%E5%9C%A8github-action%E4%B8%AD%E9%85%8D%E7%BD%AEhugo/</loc>
     <lastmod>2024-12-13T19:04:36+08:00</lastmod>
   </url><url>
     <loc>https://20403305.github.io/categories/hugo/</loc>
     <lastmod>2024-12-13T18:57:39+08:00</lastmod>
   </url><url>
-    <loc>https://20403305.github.io/posts/my-fourth-post/</loc>
+    <loc>https://20403305.github.io/posts/%E4%B8%BB%E9%A2%98%E5%92%8Chugo%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2024-12-13T18:57:39+08:00</lastmod>
   </url><url>
-    <loc>https://20403305.github.io/posts/my-third-post/</loc>
+    <loc>https://20403305.github.io/posts/%E5%A6%82%E4%BD%95%E7%94%A8hugo%E6%9D%A5%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/</loc>
     <lastmod>2024-12-13T18:52:28+08:00</lastmod>
-  </url><url>
-    <loc>https://20403305.github.io/tags/blog/</loc>
-    <lastmod>2024-12-13T12:00:00+08:00</lastmod>
   </url><url>
     <loc>https://20403305.github.io/tags/tutorial/</loc>
     <lastmod>2024-12-13T12:00:00+08:00</lastmod>
   </url><url>
-    <loc>https://20403305.github.io/posts/my-second-post/</loc>
+    <loc>https://20403305.github.io/posts/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2024-12-13T12:00:00+08:00</lastmod>
   </url><url>
-    <loc>https://20403305.github.io/about/</loc>
-    <lastmod>2024-12-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://20403305.github.io/posts/my-first-post/</loc>
+    <loc>https://20403305.github.io/posts/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</loc>
     <lastmod>2024-12-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://20403305.github.io/contact/</loc>
     <lastmod>2024-12-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://20403305.github.io/tags/%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2024-03-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://20403305.github.io/posts/test/</loc>
-    <lastmod>2024-03-14T00:00:00+00:00</lastmod>
   </url>
 </urlset>

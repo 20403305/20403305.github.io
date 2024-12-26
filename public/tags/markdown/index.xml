@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Markdown on 资料库</title>
-    <link>https://20403305.github.io/tags/markdown/</link>
+    <link>http://localhost:1313/tags/markdown/</link>
     <description>Recent content in Markdown on 资料库</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Mon, 16 Dec 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://20403305.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>测试文章：Hugo 目录显示</title>
-      <link>https://20403305.github.io/posts/demo/</link>
+      <link>http://localhost:1313/posts/demo/</link>
       <pubDate>Mon, 16 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://20403305.github.io/posts/demo/</guid>
+      <guid>http://localhost:1313/posts/demo/</guid>
       <description>本篇文章将展示如何为 Hugo 网站配置目录，并验证是否能正确显示在页面上。</description>
     </item>
   </channel>

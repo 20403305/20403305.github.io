@@ -1,7 +1,7 @@
 ---
-title: "测试文章：Hugo 目录显示"
+title: "Hugo 显示目录和图片"
 date: 2024-12-16
-tags: ["Hugo", "目录", "Markdown"]
+tags: ["Hugo"]
 categories: ["测试"]
 
 featured_image: "/images/gohugo-default-sample-hero-image.jpg"

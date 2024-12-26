@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="zh">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>主题和hugo兼容问题 || 手动升级 Hugo 版本 | 资料库</title>
+    <title>Hugo 显示目录和图片 | 资料库</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="升级 Hugo">
+    <meta name="description" content="本篇文章将展示如何为 Hugo 网站配置目录，并验证是否能正确显示在页面上。">
     <meta name="generator" content="Hugo 0.140.1">
     
     
     
-      <meta name="robots" content="noindex, nofollow">
+      <meta name="robots" content="index, follow">
     
     
       <meta name="author" content = "小苏同志">
     
 
     
-<link rel="stylesheet" href="/ananke/css/main.min.css" >
+<link rel="stylesheet" href="/ananke/css/main.min.5afa0b83dfc521910eb574d0b717cbb9c9a67d2d1cc338e7def2b4890194f910.css" >
 
 
 
     
-<script src="http://localhost:1313/js/vimsearch.js"></script>
+<script src="https://20403305.github.io/js/vimsearch.js"></script>
     
     
 
@@ -37,40 +37,46 @@
     
 
     
-      <link rel="canonical" href="http://localhost:1313/posts/my-fourth-post/">
+      <link rel="canonical" href="https://20403305.github.io/posts/hugo-%E7%9B%AE%E5%BD%95%E6%98%BE%E7%A4%BA/">
     
 
-    <meta property="og:url" content="http://localhost:1313/posts/my-fourth-post/">
+    <meta property="og:url" content="https://20403305.github.io/posts/hugo-%E7%9B%AE%E5%BD%95%E6%98%BE%E7%A4%BA/">
   <meta property="og:site_name" content="资料库">
-  <meta property="og:title" content="主题和hugo兼容问题 || 手动升级 Hugo 版本">
-  <meta property="og:description" content="升级 Hugo">
+  <meta property="og:title" content="Hugo 显示目录和图片">
+  <meta property="og:description" content="本篇文章将展示如何为 Hugo 网站配置目录，并验证是否能正确显示在页面上。">
   <meta property="og:locale" content="zh">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2024-12-13T18:57:39+08:00">
-    <meta property="article:modified_time" content="2024-12-13T18:57:39+08:00">
+    <meta property="article:published_time" content="2024-12-16T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-12-16T00:00:00+00:00">
+    <meta property="article:tag" content="Hugo">
 
-  <meta itemprop="name" content="主题和hugo兼容问题 || 手动升级 Hugo 版本">
-  <meta itemprop="description" content="升级 Hugo">
-  <meta itemprop="datePublished" content="2024-12-13T18:57:39+08:00">
-  <meta itemprop="dateModified" content="2024-12-13T18:57:39+08:00">
-  <meta itemprop="wordCount" content="282">
+  <meta itemprop="name" content="Hugo 显示目录和图片">
+  <meta itemprop="description" content="本篇文章将展示如何为 Hugo 网站配置目录，并验证是否能正确显示在页面上。">
+  <meta itemprop="datePublished" content="2024-12-16T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2024-12-16T00:00:00+00:00">
+  <meta itemprop="wordCount" content="38">
   <meta itemprop="keywords" content="Hugo">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="主题和hugo兼容问题 || 手动升级 Hugo 版本">
-  <meta name="twitter:description" content="升级 Hugo">
+  <meta name="twitter:title" content="Hugo 显示目录和图片">
+  <meta name="twitter:description" content="本篇文章将展示如何为 Hugo 网站配置目录，并验证是否能正确显示在页面上。">
 
+      
+    
 	
   
   <link rel="stylesheet" href="/css/custom.css">    
-  </head><body class="ma0 avenir bg-near-white development">
+  </head><body class="ma0 avenir bg-near-white production">
 
     
    
   
 
-  <header>
-    <div class="bg-black">
+  
+  
+  
+  <header class="cover bg-center" style="background-image: url('https://20403305.github.io/images/gohugo-default-sample-hero-image.jpg');">
+    <div class="bg-black-60">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l justify-between items-center center">
     <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
@@ -151,6 +157,12 @@
   </div>
 </nav>
 
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+          <div class="f2 f1-l fw2 white-90 mb0 lh-title">Hugo 显示目录和图片</div>
+          
+        
+      </div>
     </div>
   </header>
 
@@ -294,7 +306,7 @@
       <aside class="instapaper_ignoref b helvetica tracked ttu">
         
         Posts
-      </aside><div id="sharing" class="mt3 ananke-socials"><a href="https://telegram.me/share/url?&amp;text=%E5%8D%87%E7%BA%A7&#43;Hugo&amp;url=http%3A%2F%2Flocalhost%3A1313%2Fposts%2Fmy-fourth-post%2F"
+      </aside><div id="sharing" class="mt3 ananke-socials"><a href="https://telegram.me/share/url?&amp;text=%E6%9C%AC%E7%AF%87%E6%96%87%E7%AB%A0%E5%B0%86%E5%B1%95%E7%A4%BA%E5%A6%82%E4%BD%95%E4%B8%BA&#43;Hugo&#43;%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AE%E7%9B%AE%E5%BD%95%EF%BC%8C%E5%B9%B6%E9%AA%8C%E8%AF%81%E6%98%AF%E5%90%A6%E8%83%BD%E6%AD%A3%E7%A1%AE%E6%98%BE%E7%A4%BA%E5%9C%A8%E9%A1%B5%E9%9D%A2%E4%B8%8A%E3%80%82&amp;url=https%3A%2F%2F20403305.github.io%2Fposts%2Fhugo-%25E7%259B%25AE%25E5%25BD%2595%25E6%2598%25BE%25E7%25A4%25BA%2F"
         class="ananke-social-link telegram no-underline"
         title="Share on Telegram" aria-label="Share on Telegram"
         target="_blank" rel="nofollow noopener noreferrer">
@@ -308,28 +320,28 @@
         <span class="icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
                 
-              </span></a><a href="mailto:?&amp;body=http%3A%2F%2Flocalhost%3A1313%2Fposts%2Fmy-fourth-post%2F&amp;subject=%E4%B8%BB%E9%A2%98%E5%92%8Chugo%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98&#43;%7C%7C&#43;%E6%89%8B%E5%8A%A8%E5%8D%87%E7%BA%A7&#43;Hugo&#43;%E7%89%88%E6%9C%AC"
+              </span></a><a href="mailto:?&amp;body=https%3A%2F%2F20403305.github.io%2Fposts%2Fhugo-%25E7%259B%25AE%25E5%25BD%2595%25E6%2598%25BE%25E7%25A4%25BA%2F&amp;subject=Hugo&#43;%E6%98%BE%E7%A4%BA%E7%9B%AE%E5%BD%95%E5%92%8C%E5%9B%BE%E7%89%87"
         class="ananke-social-link email no-underline"
         title="Share on Email" aria-label="Share on Email"
         target="_blank" rel="nofollow noopener noreferrer">
         <span class="icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M64 112c-8.8 0-16 7.2-16 16l0 22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1l0-22.1c0-8.8-7.2-16-16-16L64 112zM48 212.2L48 384c0 8.8 7.2 16 16 16l384 0c8.8 0 16-7.2 16-16l0-171.8L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64l384 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128z"/></svg>
                 
-              </span></a><a href="https://facebook.com/sharer/sharer.php?&amp;u=http%3A%2F%2Flocalhost%3A1313%2Fposts%2Fmy-fourth-post%2F"
+              </span></a><a href="https://facebook.com/sharer/sharer.php?&amp;u=https%3A%2F%2F20403305.github.io%2Fposts%2Fhugo-%25E7%259B%25AE%25E5%25BD%2595%25E6%2598%25BE%25E7%25A4%25BA%2F"
         class="ananke-social-link facebook no-underline"
         title="Share on Facebook" aria-label="Share on Facebook"
         target="_blank" rel="nofollow noopener noreferrer">
         <span class="icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></svg>
                 
-              </span></a><a href="https://bsky.app/intent/compose?&amp;text=http%3A%2F%2Flocalhost%3A1313%2Fposts%2Fmy-fourth-post%2F"
+              </span></a><a href="https://bsky.app/intent/compose?&amp;text=https%3A%2F%2F20403305.github.io%2Fposts%2Fhugo-%25E7%259B%25AE%25E5%25BD%2595%25E6%2598%25BE%25E7%25A4%25BA%2F"
         class="ananke-social-link bluesky no-underline"
         title="Share on Bluesky" aria-label="Share on Bluesky"
         target="_blank" rel="nofollow noopener noreferrer">
         <span class="icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M407.8 294.7c-3.3-.4-6.7-.8-10-1.3c3.4 .4 6.7 .9 10 1.3zM288 227.1C261.9 176.4 190.9 81.9 124.9 35.3C61.6-9.4 37.5-1.7 21.6 5.5C3.3 13.8 0 41.9 0 58.4S9.1 194 15 213.9c19.5 65.7 89.1 87.9 153.2 80.7c3.3-.5 6.6-.9 10-1.4c-3.3 .5-6.6 1-10 1.4C74.3 308.6-9.1 342.8 100.3 464.5C220.6 589.1 265.1 437.8 288 361.1c22.9 76.7 49.2 222.5 185.6 103.4c102.4-103.4 28.1-156-65.8-169.9c-3.3-.4-6.7-.8-10-1.3c3.4 .4 6.7 .9 10 1.3c64.1 7.1 133.6-15.1 153.2-80.7C566.9 194 576 75 576 58.4s-3.3-44.7-21.6-52.9c-15.8-7.1-40-14.9-103.2 29.8C385.1 81.9 314.1 176.4 288 227.1z"/></svg>
                 
-              </span></a><a href="https://www.linkedin.com/shareArticle?&amp;mini=true&amp;source=http%3A%2F%2Flocalhost%3A1313%2Fposts%2Fmy-fourth-post%2F&amp;summary=%E5%8D%87%E7%BA%A7&#43;Hugo&amp;title=%E4%B8%BB%E9%A2%98%E5%92%8Chugo%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98&#43;%7C%7C&#43;%E6%89%8B%E5%8A%A8%E5%8D%87%E7%BA%A7&#43;Hugo&#43;%E7%89%88%E6%9C%AC&amp;url=http%3A%2F%2Flocalhost%3A1313%2Fposts%2Fmy-fourth-post%2F"
+              </span></a><a href="https://www.linkedin.com/shareArticle?&amp;mini=true&amp;source=https%3A%2F%2F20403305.github.io%2Fposts%2Fhugo-%25E7%259B%25AE%25E5%25BD%2595%25E6%2598%25BE%25E7%25A4%25BA%2F&amp;summary=%E6%9C%AC%E7%AF%87%E6%96%87%E7%AB%A0%E5%B0%86%E5%B1%95%E7%A4%BA%E5%A6%82%E4%BD%95%E4%B8%BA&#43;Hugo&#43;%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AE%E7%9B%AE%E5%BD%95%EF%BC%8C%E5%B9%B6%E9%AA%8C%E8%AF%81%E6%98%AF%E5%90%A6%E8%83%BD%E6%AD%A3%E7%A1%AE%E6%98%BE%E7%A4%BA%E5%9C%A8%E9%A1%B5%E9%9D%A2%E4%B8%8A%E3%80%82&amp;title=Hugo&#43;%E6%98%BE%E7%A4%BA%E7%9B%AE%E5%BD%95%E5%92%8C%E5%9B%BE%E7%89%87&amp;url=https%3A%2F%2F20403305.github.io%2Fposts%2Fhugo-%25E7%259B%25AE%25E5%25BD%2595%25E6%2598%25BE%25E7%25A4%25BA%2F"
         class="ananke-social-link linkedin no-underline"
         title="Share on LinkedIn" aria-label="Share on LinkedIn"
         target="_blank" rel="nofollow noopener noreferrer">
@@ -337,7 +349,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
                 
               </span></a></div>
-<h1 class="f1 athelas mt3 mb1">主题和hugo兼容问题 || 手动升级 Hugo 版本</h1>
+<h1 class="f1 athelas mt3 mb1">Hugo 显示目录和图片</h1>
       
       <p class="tracked">
         By <strong>小苏同志</strong>
@@ -345,7 +357,7 @@
       
       
       
-      <time class="f6 mv4 dib tracked" datetime="2024-12-13T18:57:39+08:00">2024年12月13日</time>
+      <time class="f6 mv4 dib tracked" datetime="2024-12-16T00:00:00Z">2024年12月16日</time>
       
 
       
@@ -359,85 +371,23 @@
 </div>
     <div class="flex-l justify-between w-100">
       
-      <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>从错误日志</p>
-<pre tabindex="0"><code>Module &#34;ananke&#34; is not compatible with this Hugo version: Min 0.128.0; run &#34;hugo mod graph&#34; for more information.
-</code></pre><h3 id="问题原因">问题原因</h3>
-<p><code>Ananke</code> 主题要求使用 Hugo 版本至少为 <code>0.128.0</code>，而你当前使用的 Hugo 版本是 <code>v0.123.7</code>，因此会发生兼容性问题。</p>
-<p>此外，错误的根本原因也包括以下几点：</p>
-<pre tabindex="0"><code>error calling partial: &#34;/root/myblog/themes/ananke/layouts/partials/site-style.html:1:8&#34;: execute of template failed: template: partials/site-style.html:1:8: executing &#34;partials/site-style.html&#34; at &lt;partialCached &#34;func/style/GetMainCSS&#34; &#34;style/GetMainCSS&#34;&gt;: error calling partialCached: &#34;/root/myblog/themes/ananke/layouts/partials/func/style/GetMainCSS.html:71:23&#34;: execute of template failed: template: partials/func/style/GetMainCSS.html:71:23: executing &#34;partials/func/style/GetMainCSS.html&#34; at &lt;css&gt;: can&#39;t evaluate field Sass in type interface {}
-</code></pre><p>这个错误表明，主题的模板代码在处理样式时出错，尤其是在尝试加载或应用 <code>Sass</code> 样式时。</p>
-<h3 id="解决方法">解决方法</h3>
-<ol>
-<li>
-<p><strong>升级 Hugo 到兼容版本</strong><br>
-最直接的解决方法是将 Hugo 升级到 <code>v0.128.0</code> 或更高版本。可以通过以下命令来升级 Hugo：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt-get update
-</span></span><span style="display:flex;"><span>sudo apt-get install hugo
-</span></span></code></pre></div><p>或者，如果你希望安装特定版本的 Hugo，可以使用 <a href="https://github.com/gohugoio/hugo/releases">Hugo 的官方发布页面</a> 下载并安装最新版本。</p>
-</li>
-<li>
-<p><strong>使用与当前 Hugo 版本兼容的主题</strong><br>
-如果你不希望升级 Hugo，另一个选择是使用与 <code>v0.123.7</code> 版本兼容的 Hugo 主题。你可以尝试更换主题，或者寻找兼容旧版 Hugo 的主题。</p>
-<p>一些兼容老版本 Hugo 的主题可以在 <a href="https://themes.gohugo.io/">Hugo 官方主题库</a> 中找到。</p>
-</li>
-<li>
-<p><strong>手动修改主题模板（不推荐）</strong><br>
-如果你有能力，可以尝试修改 <code>Ananke</code> 主题的模板，使其兼容当前 Hugo 版本。这通常涉及到修改主题的 <code>layouts/partials/</code> 目录下的样式文件，特别是与 <code>Sass</code> 相关的部分。这个方法比较复杂且容易出错，不建议初学者使用。</p>
-</li>
-<li>
-<p><strong>检查 <code>Sass</code> 配置</strong><br>
-如果你希望继续使用当前的 Hugo 版本，并且想保留 <code>Ananke</code> 主题，可以尝试通过以下方式禁用或修复 <code>Sass</code> 配置：</p>
-<ul>
-<li>在 <code>config.toml</code> 文件中禁用 <code>Sass</code> 配置，或将其修改为一个兼容的配置。检查主题文档，了解如何处理或禁用 <code>Sass</code>。</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">params</span>]
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">disableSass</span> = <span style="color:#66d9ef">true</span>
-</span></span></code></pre></div><p>或者如果你想继续使用 Sass，可以尝试安装和配置 Sass 工具链，使其能正确编译主题中的 Sass 文件。</p>
-</li>
-</ol>
-<h3 id="总结">总结</h3>
-<ul>
-<li><strong>最简单的解决方案</strong>是将 Hugo 升级到 <code>v0.128.0</code> 或更高版本，以确保 <code>Ananke</code> 主题兼容。</li>
-<li>如果不想升级 Hugo，可以选择使用一个兼容旧版本 Hugo 的主题。</li>
-<li>如果你对模板修改有经验，也可以尝试调整 <code>Ananke</code> 主题中的代码，但这是一个较为复杂的方案。</li>
-</ul>
-<hr>
-<p>看起来你在 Ubuntu 系统上安装的 Hugo 版本仍然是 <code>v0.123.7</code>，并且通过 <code>apt-get</code> 安装的 Hugo 版本已经是最新的，但它依然不符合你所需要的版本（<code>0.128.0</code> 或更高版本）。</p>
-<h3 id="解决方法手动升级-hugo-版本">解决方法：手动升级 Hugo 版本</h3>
-<p>Ubuntu 的 <code>apt</code> 包管理器提供的 Hugo 版本可能会比较老，因此你需要手动升级到 Hugo 的最新版本。你可以按照以下步骤来安装 Hugo 的最新版本。</p>
-<h3 id="步骤-1卸载当前版本的-hugo">步骤 1：卸载当前版本的 Hugo</h3>
-<p>首先，卸载系统中当前安装的 Hugo 版本：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt-get remove hugo
-</span></span></code></pre></div><h3 id="步骤-2下载最新的-hugo-版本">步骤 2：下载最新的 Hugo 版本</h3>
-<p>接下来，从 Hugo 的 <a href="https://github.com/gohugoio/hugo/releases">GitHub 发布页面</a> 下载最新的 Hugo 版本。你可以通过以下命令来下载：</p>
-<ol>
-<li>访问 <a href="https://github.com/gohugoio/hugo/releases">Hugo Releases</a> 页面，找到最新的版本（<code>v0.128.0</code> 或更高版本）。</li>
-<li>下载对应你系统的 Hugo 二进制文件（例如，<code>hugo_extended_0.128.0_linux-amd64.tar.gz</code>）。</li>
-</ol>
-<p>或者，你可以使用以下命令下载最新版本的 Hugo：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 下载 Hugo v0.128.0 的 Linux 版本</span>
-</span></span><span style="display:flex;"><span>wget https://github.com/gohugoio/hugo/releases/download/v0.128.0/hugo_extended_0.128.0_linux-amd64.tar.gz
-</span></span></code></pre></div><h3 id="步骤-3解压并安装-hugo">步骤 3：解压并安装 Hugo</h3>
-<p>解压下载的压缩包，并将 <code>hugo</code> 二进制文件移到 <code>/usr/local/bin</code> 目录下，使其全局可用：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>tar -xvzf hugo_extended_0.128.0_linux-amd64.tar.gz
-</span></span><span style="display:flex;"><span>sudo mv hugo /usr/local/bin/
-</span></span></code></pre></div><h3 id="步骤-4验证安装">步骤 4：验证安装</h3>
-<p>安装完成后，验证是否成功安装了最新版本的 Hugo：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo version
-</span></span></code></pre></div><p>你应该看到类似如下的输出，表明你已经安装了 Hugo <code>v0.128.0</code> 或更高版本：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo v0.128.0+extended linux/amd64 BuildDate<span style="color:#f92672">=</span>2024-12-14T01:07:23Z VendorInfo<span style="color:#f92672">=</span>ubuntu:0.128.0-1ubuntu0.2
-</span></span></code></pre></div><h3 id="步骤-5重启-hugo-服务">步骤 5：重启 Hugo 服务</h3>
-<p>完成升级后，你可以重新启动 Hugo 开发服务器：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo server
-</span></span></code></pre></div><p>现在，<code>Ananke</code> 主题应该可以正常运行，并且与你的 Hugo 版本兼容。</p>
-<h3 id="总结-1">总结</h3>
-<ol>
-<li><strong>卸载旧版本的 Hugo</strong>，并通过手动下载和安装的方式安装最新版本。</li>
-<li><strong>下载和解压最新的 Hugo 二进制文件</strong>。</li>
-<li><strong>验证安装</strong>，确保使用的是兼容 <code>Ananke</code> 主题的 Hugo 版本。</li>
-</ol>
-<p>通过这种方式，你应该能够解决兼容性问题，并成功运行 Hugo 网站。</p>
-<ul class="pa0">
+      <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="欢迎阅读这篇文章">欢迎阅读这篇文章</h1>
+<p>这是一篇测试文章，用来检查在 Hugo 主题中是否能正确显示目录。</p>
+<h2 id="1-引言">1. 引言</h2>
+<p>本篇文章将展示如何为 Hugo 网站配置目录，并验证是否能正确显示在页面上。</p>
+<h3 id="11-什么是-hugo">1.1 什么是 Hugo？</h3>
+<p>Hugo 是一个快速的静态站点生成器。它通过使用简单的 Markdown 文件来生成网站内容。Hugo 的速度非常快，适合用来构建各种类型的静态网站。</p>
+<h3 id="12-主题目录">1.2 主题目录</h3>
+<p>在 Hugo 中，主题通常会提供用于显示目录的功能。目录是一个自动生成的导航工具，能帮助用户快速跳转到文章的不同部分。</p>
+<h2 id="2-配置-hugo-主题">2. 配置 Hugo 主题</h2>
+<h3 id="21-安装主题">2.1 安装主题</h3>
+<p>首先，你需要安装一个支持目录功能的 Hugo 主题。在 Hugo 的官方文档中有很多可用的主题，选择一个适合你的需求的主题并安装。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
+</span></span></code></pre></div><ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/hugo/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Hugo</a>
+   </li>
   
 </ul>
 <div class="mt6 instapaper_ignoref">
@@ -451,18 +401,15 @@
         <div class="toc-content">
           <nav id="TableOfContents">
   <ol>
-    <li>
+    <li><a href="#1-引言">1. 引言</a>
       <ol>
-        <li><a href="#问题原因">问题原因</a></li>
-        <li><a href="#解决方法">解决方法</a></li>
-        <li><a href="#总结">总结</a></li>
-        <li><a href="#解决方法手动升级-hugo-版本">解决方法：手动升级 Hugo 版本</a></li>
-        <li><a href="#步骤-1卸载当前版本的-hugo">步骤 1：卸载当前版本的 Hugo</a></li>
-        <li><a href="#步骤-2下载最新的-hugo-版本">步骤 2：下载最新的 Hugo 版本</a></li>
-        <li><a href="#步骤-3解压并安装-hugo">步骤 3：解压并安装 Hugo</a></li>
-        <li><a href="#步骤-4验证安装">步骤 4：验证安装</a></li>
-        <li><a href="#步骤-5重启-hugo-服务">步骤 5：重启 Hugo 服务</a></li>
-        <li><a href="#总结-1">总结</a></li>
+        <li><a href="#11-什么是-hugo">1.1 什么是 Hugo？</a></li>
+        <li><a href="#12-主题目录">1.2 主题目录</a></li>
+      </ol>
+    </li>
+    <li><a href="#2-配置-hugo-主题">2. 配置 Hugo 主题</a>
+      <ol>
+        <li><a href="#21-安装主题">2.1 安装主题</a></li>
       </ol>
     </li>
   </ol>
@@ -476,6 +423,25 @@
 
 
 
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/%E5%A6%82%E4%BD%95%E5%9C%A8github-action%E4%B8%AD%E9%85%8D%E7%BD%AEhugo/">如何在github action中配置hugo</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/%E4%B8%BB%E9%A2%98%E5%92%8Chugo%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98/">主题和hugo兼容问题 || 手动升级 Hugo 版本</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/%E5%A6%82%E4%BD%95%E7%94%A8hugo%E6%9D%A5%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/">ubuntu liunx 如何用Hugo来搭建个人博客网站</a>
+        </li>
+	    
+    </ul>
+</div>
 
 </aside>
 
@@ -512,7 +478,7 @@
 </div>
 
 <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://localhost:1313/" >
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://20403305.github.io/" >
     &copy;  资料库 2024 
   </a>
     <div><div class="ananke-socials"><a href="https://t.me/%25!s%28%3cnil%3e%29" target="_blank" rel="noopener"

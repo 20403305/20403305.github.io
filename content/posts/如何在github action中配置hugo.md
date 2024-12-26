@@ -3,6 +3,7 @@ title = '如何在github action中配置hugo'
 date = 2024-12-13T19:04:36+08:00
 draft = false
 categories = ['Tutorial']
+tags = ['Hugo']
 +++
 
 <!--more-->

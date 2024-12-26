@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>测试 on 资料库</title>
-    <link>https://20403305.github.io/tags/%E6%B5%8B%E8%AF%95/</link>
+    <link>http://localhost:1313/tags/%E6%B5%8B%E8%AF%95/</link>
     <description>Recent content in 测试 on 资料库</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Thu, 14 Mar 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://20403305.github.io/tags/%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>测试文章</title>
-      <link>https://20403305.github.io/posts/test/</link>
+      <link>http://localhost:1313/posts/test/</link>
       <pubDate>Thu, 14 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://20403305.github.io/posts/test/</guid>
+      <guid>http://localhost:1313/posts/test/</guid>
       <description>&lt;p&gt;这是一篇测试文章的内容。&lt;/p&gt;</description>
     </item>
   </channel>
