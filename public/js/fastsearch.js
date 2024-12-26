@@ -249,9 +249,9 @@ function loadSearch() {
   fetchJSONFile('/index.json', function(data){
 
       var options = { // fuse.js options; check fuse.js website for details
-        shouldSort: true,
-        location: 0,
-        distance: 100, 
+        shouldSort: true, // sort results by score
+        location: 0,  // location of query in file
+        distance: 999999, // 搜索距离 999999
         threshold: 0.4,
         // minMatchCharLength: 2,
         minMatchCharLength: 1,
